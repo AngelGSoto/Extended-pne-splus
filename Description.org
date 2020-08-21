@@ -1,13 +1,13 @@
 * Description of the methodology to find for thos extendend and resolved planetary nebulae=>
 
-A Gaia Data Release 2 catalogue of white dwarfs and a comparison with SDSS. (2019)
+** A Gaia Data Release 2 catalogue of white dwarfs and a comparison with SDSS. (2019)
 Go to the original article (10.1093/mnras/sty3016)
 
 Keywords : catalogues - surveys - white dwarfs
 
 Abstract: We present a catalogue of white dwarf candidates selected from the second data release of Gaia (DR2). We used a sample of spectroscopically confirmed white dwarfs from the Sloan Digital Sky Survey (SDSS) to map the entire space spanned by these objects in the Gaia Hertzsprung-Russell diagram. We then defined a set of cuts in absolute magnitude, colour, and a number of Gaia quality flags to remove the majority of contaminating objects. Finally, we adopt a method analogous to the one presented in our earlier SDSS photometric catalogues to calculate a probability of being a white dwarf (PWD) for all Gaia sources which passed the initial selection. The final catalogue is composed of 486641 stars with calculated PWD from which it is possible to select a sample of∼260000 high-confidence white dwarf candidates in the magnitude range 8<G<21. By comparing this catalogue with a sample of SDSS white dwarf candidates we estimate an upper limit in completeness of 85 per cent for white dwarfs with G≤20mag and Teff>7000K, at high Galactic latitudes (|b|>20deg). However, the completeness drops at low Galactic latitudes, and the magnitude limit of the catalogue varies significantly across the sky as a function of Gaia's scanning law. We also provide the list of objects within our sample with available SDSS spectroscopy. 
 
-Description:
+*** Description:
 The main catalogue provides 486,641 stars selected from Gaia DR2 with
 calculated probabilities of being a white dwarf (PWD). The PWD values
 can used to reliably select high-confidence white dwarf candidates
@@ -136,7 +136,7 @@ Byte-by-byte Description of file: gaia2wd.dat
 ################################################################################################################
 Tanta cosa! luchando con esta enorme tabla (que descargué en vizier) con python, lo cual no estaba consiguiendo lidiar con ella, no sé por qué.
 
-Pero recordé que todas las tablas de vizier estań en Topcat, así que encontré una solución.
+Pero recordé que todas las tablas de vizier estań en Topcat, así que encontré una solución.\\
 
 Usé el SQL: SELECT * FROM "J/MNRAS/482/4570/gaia2wd" WHERE Pwd >= 0.75 AND BPmag - RPmag <= -0.5
 
@@ -151,52 +151,52 @@ Mis diagramas de color con esta muestra: "color-diagrams-splusdr2_automatic.py"
 Interesante objeto: 156.23550874000 -30.37457358820, está en HYDRA-0062. All SPLUS information is in the interesante-objeto_gaia.tab file.
 
 
-#########################################################################################
-Probando el algoritma para recurar la emissión de Ha en S-PLUS##########################
-#########################################################################################
+
++ Probando el algoritma para recurar la emissión de Ha en S-PLUS
+
 Haciendo algunos testes:
 Seyfert2: 2MFGC 913, (18.3877629343,  +0.4967191726), debe estar en el campo; STRIPE82-0028
 
--) Estas imagenes son del tipo .fz, hay que descompactar usando: funpack *.fz
+- Estas imagenes son del tipo .fz, hay que descompactar usando: funpack *.fz
 
--) Cortando las imágenes usando el programa: cut-images-fits.py. En este programa crop_radius = 90*u.arcsec = 991.276arc de uno de los lados.
+- Cortando las imágenes usando el programa: cut-images-fits.py. En este programa crop_radius = 90*u.arcsec = 991.276arc de uno de los lados.
 
--) Hice unas modificaiones al programa de Kadu para automatizarlo aún más, para correr simplemente hay que hacer: "python Pne-halpha-luis.py STRIPE82-0164 --source 39866".
-  --) Hay que especificar el tile y la fuente y esta última sólo para guardar el archivo con el nombre de la fuente.
-  --) será posible entrar al disco externo con python? tengo poco espacio en mi latop.
+- Hice unas modificaiones al programa de Kadu para automatizarlo aún más, para correr simplemente hay que hacer: "python Pne-halpha-luis.py STRIPE82-0164 --source 39866".
+  -- Hay que especificar el tile y la fuente y esta última sólo para guardar el archivo con el nombre de la fuente.
+  -- será posible entrar al disco externo con python? tengo poco espacio en mi latop.
 
--) Intent recuperar la emission Halpha de:
-   :) SPLUS.STRIPE82-0026.0000019213.griz, Halpha emission? No
-   :) SPLUS.STRIPE82-0028.0000008144.griz, Halpah emission? No
-   :) SPLUS.STRIPE82-0064.0000025232.griz, Halpah emission? No
-   :) SPLUS.STRIPE82-0164.0000039866.griz, Halpha emission? No
-   :) SPLUS.STRIPE82-0034.0000028332.griz, Halpha emission? No
-   :) SPLUS.STRIPE82-0036.0000002566.griz, Halpha emission? No. Hay una cosa que emite mucho en Halpha, pero comparando todos los tres filtros, probablemte es una cosa rara y mal con la fotometría.
-   :) SPLUS.STRIPE82-0043.0000014591.griz, Halpha emission? No. pero hay una estrellita bien brillante en él que obviamente se quitado todo el continuo, eso es bueno, muy parecido con el campo en el que se encuentra jacoby 1 en JPLUS.
-   :) SPLUS.STRIPE82-0048.0000012148.griz, Halpha emission? No
-   :) SPLUS.STRIPE82-0048.0000021068.griz, Halpha emission? No
-   :) SPLUS.STRIPE82-0111.0000014951.griz, Halpha emission? No?, pero parece que hay una inmensa estructura que emite en halpha. Probablemente sera bueno correr el programa a todo el campo.
-   :) SPLUS.STRIPE82-0115.0000040262.griz, Halpha emission? No, pero parece que también hay una estructura que emite en Halpha.
-   :) SPLUS.STRIPE82-0117.0000024245.griz, Halpha emission? No
-   :) SPLUS.STRIPE82-0119.0000004222.griz, Halpha emission? No, hay una cosa que emite mucho en Halpha, (esto estará correcto?).
-   :) SPLUS.STRIPE82-0128.0000039700.griz, Halpha emission? NO, hay una estructura que emite en Halpa. --->> Arreglado. continua estando una estructura que emite en Halpha
+- Intent recuperar la emission Halpha de:
+   : SPLUS.STRIPE82-0026.0000019213.griz, Halpha emission? No
+   : SPLUS.STRIPE82-0028.0000008144.griz, Halpah emission? No
+   : SPLUS.STRIPE82-0064.0000025232.griz, Halpah emission? No
+   : SPLUS.STRIPE82-0164.0000039866.griz, Halpha emission? No
+   : SPLUS.STRIPE82-0034.0000028332.griz, Halpha emission? No
+   : SPLUS.STRIPE82-0036.0000002566.griz, Halpha emission? No. Hay una cosa que emite mucho en Halpha, pero comparando todos los tres filtros, probablemte es una cosa rara y mal con la fotometría.
+   : SPLUS.STRIPE82-0043.0000014591.griz, Halpha emission? No. pero hay una estrellita bien brillante en él que obviamente se quitado todo el continuo, eso es bueno, muy parecido con el campo en el que se encuentra jacoby 1 en JPLUS.
+   : SPLUS.STRIPE82-0048.0000012148.griz, Halpha emission? No
+   : SPLUS.STRIPE82-0048.0000021068.griz, Halpha emission? No
+   : SPLUS.STRIPE82-0111.0000014951.griz, Halpha emission? No?, pero parece que hay una inmensa estructura que emite en halpha. Probablemente sera bueno correr el programa a todo el campo.
+   : SPLUS.STRIPE82-0115.0000040262.griz, Halpha emission? No, pero parece que también hay una estructura que emite en Halpha.
+   : SPLUS.STRIPE82-0117.0000024245.griz, Halpha emission? No
+   : SPLUS.STRIPE82-0119.0000004222.griz, Halpha emission? No, hay una cosa que emite mucho en Halpha, (esto estará correcto?).
+   : SPLUS.STRIPE82-0128.0000039700.griz, Halpha emission? NO, hay una estructura que emite en Halpa. --->> Arreglado. continua estando una estructura que emite en Halpha
    ####################################################################################################
    #Recuerda hay un objeto que parece tener una emission de Halpha muy debil en el campo STRIPE82-0034#
    ####################################################################################################
-   ..) Corrí de nuevo el programa usando los nuevos ZPs y el programa ya arreglado.
+   -- Corrí de nuevo el programa usando los nuevos ZPs y el programa ya arreglado.
    
--) Escribi unos nuevos programas basado en los anterios, esto para leer los nuevos ZP, los progrmas son (es mejor más automatizado aún): Pne-halpha-luis-newzp.py y misc_luis.py. El archivo con los nuevos ZP de Dr1 es: " ZPfiles_2020/SPLUS_DR1_Revised_ZPs.cat"
+- Escribi unos nuevos programas basado en los anterios, esto para leer los nuevos ZP, los progrmas son (es mejor más automatizado aún): Pne-halpha-luis-newzp.py y misc_luis.py. El archivo con los nuevos ZP de Dr1 es: " ZPfiles_2020/SPLUS_DR1_Revised_ZPs.cat"
 
--) Intenté extraer la emisión de los campos enteros, pero dio un error de memoria al correr el programa: "MemoryError".
+- Intenté extraer la emisión de los campos enteros, pero dio un error de memoria al correr el programa: "MemoryError".
 
--) Hacer zoom centrado en algunos de las WD en el programa cut-*.py: crop_radius = 200*u.arcsec => SPLUS.STRIPE82-0128.0000039700.griz. 
+- Hacer zoom centrado en algunos de las WD en el programa cut-*.py: crop_radius = 200*u.arcsec => SPLUS.STRIPE82-0128.0000039700.griz. 
 
 #######################################################################################################
-First case of scientific verification=>
+** First case of scientific verification=>
 
-PN K 1-28 (158.62759 -29.18759), SPLUS.HYDRA-0054.0000056653.
+- PN K 1-28 (158.62759 -29.18759), SPLUS.HYDRA-0054.0000056653.
 
--) Para este corrí la antigua versión del programa (Pne-halpha-luis.py), porque los ZPs de cada campo están en archivos separados (son del tipo HYDRA-0054_ZP.cat).  
+- Para este corrí la antigua versión del programa (Pne-halpha-luis.py), porque los ZPs de cada campo están en archivos separados (son del tipo HYDRA-0054_ZP.cat).  
 
 ##########################################################################################################
 Probablemente hay que hacer      data *= np.power(10, -0.4 * (-25+zps) )[:, None, None] # Apply zero point
