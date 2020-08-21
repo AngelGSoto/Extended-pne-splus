@@ -1,0 +1,205 @@
+Description of the methodology to find for thos extendend and resolved planetary nebulae=>
+
+A Gaia Data Release 2 catalogue of white dwarfs and a comparison with SDSS. (2019)
+Go to the original article (10.1093/mnras/sty3016)
+
+Keywords : catalogues - surveys - white dwarfs
+
+Abstract: We present a catalogue of white dwarf candidates selected from the second data release of Gaia (DR2). We used a sample of spectroscopically confirmed white dwarfs from the Sloan Digital Sky Survey (SDSS) to map the entire space spanned by these objects in the Gaia Hertzsprung-Russell diagram. We then defined a set of cuts in absolute magnitude, colour, and a number of Gaia quality flags to remove the majority of contaminating objects. Finally, we adopt a method analogous to the one presented in our earlier SDSS photometric catalogues to calculate a probability of being a white dwarf (PWD) for all Gaia sources which passed the initial selection. The final catalogue is composed of 486641 stars with calculated PWD from which it is possible to select a sample of∼260000 high-confidence white dwarf candidates in the magnitude range 8<G<21. By comparing this catalogue with a sample of SDSS white dwarf candidates we estimate an upper limit in completeness of 85 per cent for white dwarfs with G≤20mag and Teff>7000K, at high Galactic latitudes (|b|>20deg). However, the completeness drops at low Galactic latitudes, and the magnitude limit of the catalogue varies significantly across the sky as a function of Gaia's scanning law. We also provide the list of objects within our sample with available SDSS spectroscopy. 
+
+Description:
+The main catalogue provides 486,641 stars selected from Gaia DR2 with
+calculated probabilities of being a white dwarf (PWD). The PWD values
+can used to reliably select high-confidence white dwarf candidates
+with a flexible compromise between completeness and level of potential
+contamination. As a generic guideline selecting objects with PWD>0.75
+recovers 96 per cent of the spectroscopically confirmed white dwarfs
+from SDSS and only 1 per cent of the contaminant (non white dwarfs)
+objects.
+All Gaia sources in the catalogue have also been cross matched with
+SDSS DR14 taking into account the difference in epoch of observation
+and proper motions. Whether available we include SDSS ugriz
+photometry. In a separate table we provide informations on all the
+available SDSS spectra for the Gaia sources in the main catalogue.
+
+
+dt=np.dtype([('Idd', 'S10'), ('DR2', 'f8'), ('Source', 'S10'), ('a', 'f8'), ('b', 'f8'), ('RAdeg', 'f8'), ('e_RAdeg', 'f8'), 
+             ('DEdeg', 'f8'), ('e_ DEdeg', 'f8'), ('Plx', 'f8'), 
+('ePlx', 'f8'), ('pmRA', 'f8'), ('e_pmRA', 'f8'), ('pmDE', 'f8'),
+('e_pmDE', 'f8'), ('epsi', 'f8'), ('amax', 'f8'), ('FG', 'f8'), ('e_FG', 'f8'),
+('Gmag', 'f8'), ('FBP', 'f8'), ('e_FBP', 'f8'), ('BPmag', 'f8'), ('FRP', 'f8'), 
+('e_FRP', 'f8'), ('RPmag', 'f8'), ('E(BR/RP)', 'f8'), ('GLON', 'f8'), ('GLAT', 'f8'), 
+('Density', 'f8'), ('AG', 'f8'), ('SDSS', 'S10'), ('umag', 'f8'), ('e_umag', 'f8'), 
+('gmag', 'f8'), ('e_gmag', 'f8'), ('rmag', 'f8'), ('e_rmag', 'f8'), ('imag', 'f8'), 
+('e_imag', 'f8'), ('zmag', 'f8'), ('e_zmag', 'f8'), ('Pwd', 'f8'),  ('f_Pwd', 'f8'), 
+('TeffH', 'f8'), ('e_TeffH', 'f8'), ('loggH', 'f8'), ('e_loggH', 'f8'), ('MassH', 'f8'), 
+('e_MassH', 'f8'), ('chi2H', 'f8'), ('TeffHe', 'f8'), ('e_TeffHe', 'f8'), ('loggHe', 'f8'), 
+('e_loggHe', 'f8'), ('MassHe', 'f8'), ('e_MassHe', 'f8'), ('chi2He', 'f8')])
+Byte-by-byte Description of file: gaia2wd.dat
+--------------------------------------------------------------------------------
+   Bytes   Format Units    Label    Explanations
+--------------------------------------------------------------------------------
+    1-  23  A23   ---      WD       WD name (WDJHHMMSS.ss+DDMMSS.ss, J2000)
+                                     (white_dwarf_name)
+   25-  52  A28   ---      DR2Name  Unique Gaia source designation (designation)
+   54-  72  I19   ---      Source   Unique Gaia source identifier (source_id)
+   74-  96 F23.19 deg      RAdeg    Gaia DR2 barycentric right ascension (ICRS)
+                                      at epoch J2015.5 (ra)
+   98- 117 F20.18 mas    e_RAdeg    Standard error of right ascension (ra_error)
+  119- 140 E22.18 deg      DEdeg    Gaia DR2 barycentric declination (ICRS)
+                                     at epoch J2015.5 (dec)
+  142- 161 F20.18 mas    e_DEdeg    Standard error of declination (dec_error)
+  163- 183 F21.17 mas      Plx      Absolute stellar parallax of the source
+                                      at J2015.5 (parallax)
+  185- 204 F20.18 mas    e_Plx      Standard error of parallax (parallax_error)
+  206- 227 E22.19 mas/yr   pmRA     Proper motion in right ascension
+                                      (pmRAxcosDE) (pmra)
+  229- 248 F20.18 mas/yr e_pmRA     Standard error of proper motion in
+                                      right ascension (pmra_error)
+  250- 271 E22.19 mas/yr   pmDE     Proper motion in declination (pmdec)
+  273- 292 F20.18 mas/yr e_pmDE     Standard error of proper motion
+                                      in declination (pmdec_error)
+  294- 315 F22.19 mas      epsi     Measure of the residuals in the astrometric
+                                      solution for the source
+                                      (astrometric_excess_noise)
+  317- 327  F11.9 mas      amax     Five-dimensional equivalent to the
+                                      semi-major axis of the Gaia position error
+                                      ellipse (astrometric_sigma5d_max)
+  329- 350 F22.14 e-/s     FG       Gaia G-band mean flux (phot_g_mean_flux)
+  352- 374 F23.17 e-/s   e_FG       Error on G-band mean flux
+                                      (phot_g_mean_flux_error)
+  376- 385  F10.7 mag      Gmag     Gaia G-band mean magnitude (Vega scale)
+                                      (phot_g_mean_mag)
+  387- 409 F23.15 e-/s     FBP      Integrated GBP mean flux (phot_bp_mean_flux)
+  411- 435 F25.18 e-/s   e_FBP      Error on GBP-band mean flux
+                                      (phot_bp_mean_flux_error)
+  437- 446  F10.7 mag      BPmag    Gaia GBP-band mean magnitude (Vega scale)
+                                      (phot_bp_mean_mag)
+  448- 470 F23.15 e-/s     FRP      Integrated GRP mean flux (phot_rp_mean_flux)
+  472- 497 F26.19 e-/s   e_FRP      Error on GRP-band mean flux
+                                      (phot_rp_mean_flux_error)
+  499- 508  F10.7 mag      RPmag    Gaia GRP-band mean magnitude (Vega scale)
+                                     (phot_rp_mean_mag)
+  510- 520  F11.9 ---      E(BR/RP) GBP/GRP excess factor estimated from the
+                                     comparison of the sum of integrated GBP and
+                                     GRP fluxes with respect to the flux in the
+                                     G-band (phot_bp_rp_excess_factor)
+  522- 542 E21.19 deg      GLON     Galactic longitude (l)
+  544- 565 E22.19 deg      GLAT     Galactic latitude (b)
+  567- 578  F12.4 ---      Density  The number of Gaia sources per square degree
+                                     around this object (density)
+  580- 602 F23.19 mag      AG       Extinction  in the Gaia G-band band derived
+                                     from E(B-V) values from Schlafly and
+                                     Finkbeiner (2011ApJ...737..103S) (AG)
+  604- 622  A19   ---      SDSS     SDSS object name if available
+                                     (JHHMMSS,.ss+DDMMSS.s, J2000) (SDSS_name)
+  624- 641 F18.15 mag      umag     ? SDSS u band magnitude (umag)
+  643- 664 F22.18 mag    e_umag     ? SDSS u band magnitude uncertainty (e_umag)
+  666- 683 F18.15 mag      gmag     ? SDSS g band magnitude (gmag)
+  685- 706 F22.19 mag    e_gmag     ? SDSS g band magnitude uncertainty (e_gmag)
+  708- 725 F18.15 mag      rmag     ? SDSS r band magnitude (rmag)
+  727- 747 F21.18 mag    e_rmag     ? SDSS r band magnitude uncertainty (e_rmag)
+  749- 766 F18.15 mag      imag     ? SDSS i band magnitude (imag)
+  768- 789 F22.19 mag    e_imag     ? SDSS i band magnitude uncertainty (e_imag)
+  791- 808 F18.15 mag      zmag     ? SDSS z band magnitude (zmag)
+  810- 830 F21.18 mag    e_zmag     ? SDSS z band magnitude uncertainty (e_zmag)
+  832- 852 E21.19 ---      Pwd      [0/1]? The probability of being a white
+                                       dwarf (Pwd)
+       854  I1    ---    f_Pwd      [0/1] If 1 it indicates the PWD value
+                                        could be unreliable (Pwd_flag)
+  856- 868  F13.6 K        TeffH    ? Effective temperature from fitting the
+                                      dereddened G,GBP, and GRP absolute fluxes
+                                      with pure-H model atmospheres (Teff_H)
+  870- 882  F13.6 K      e_TeffH    ? Uncertainty on Teff_H (eTeff_H)
+  884- 891  F8.6  ---      loggH    ? Surface gravity from fitting the
+                                      dereddened G,GBP,and GRP absolute fluxes
+                                      with pure-H model atmospheres (log_g_H)
+  893- 900  E8.6  ---    e_loggH    ? Uncertainty on log_g_H (elog_g_H)
+  902- 909  F8.6  Msun     MassH    ? Stellar mass resulting from the adopted
+                                      mass-radius relation (mass_H)
+  911- 919  E9.6  Msun   e_MassH    ? Uncertainty on the mass (emass_H)
+  921- 931  E11.6 ---      chi2H    ? chi2 value of the fit (pure-H) (chi2_H)
+  933- 944  F12.6 K        TeffHe   ? Effective temperature from fitting the
+                                      dereddened G,GBP, and GRP absolute fluxes
+                                      with pure-He model atmospheres (Teff_He)
+  946- 959  F14.6 K      e_TeffHe   ? Uncertainty on Teff_He (eTeff_He)
+  961- 968  F8.6  ---      loggHe   ? Surface gravity from fitting the
+                                      dereddened G,GBP,and GRP absolute fluxes
+                                      with pure-He model atmospheres (log_g_He)
+  970- 977  E8.6  ---    e_loggHe   ? Uncertainty on log_g_He (elog_g_He)
+  979- 986  F8.6  Msun     MassHe   ? Stellar mass resulting from the adopted
+                                      mass-radius relation (mass_He)
+  988- 996  E9.6  Msun   e_MassHe   ? Uncertainty on the mass (emass_He)
+
+  998-1008  E11.6 ---     chisqHe  ? chi2 value of the fit (pure-H) (chisq_He)
+
+################################################################################################################
+Tanta cosa! luchando con esta enorme tabla (que descargué en vizier) con python, lo cual no estaba consiguiendo lidiar con ella, no sé por qué.
+
+Pero recordé que todas las tablas de vizier estań en Topcat, así que encontré una solución.
+
+Usé el SQL: SELECT * FROM "J/MNRAS/482/4570/gaia2wd" WHERE Pwd >= 0.75 AND BPmag - RPmag <= -0.5
+
+Al aplicar este código conseguí la tabla: "gaia2wd_pwd075_bluer.fits"
+
+Al hacer crossmatching usando topcat y DR2 S-PLUS: "SPLUSidr2_Stripe82_WD_gaia.fits"
+
+########################################################################################################
+Mis diagramas de color con esta muestra: "color-diagrams-splusdr2_automatic.py"
+
+######################################################################################
+Interesante objeto: 156.23550874000 -30.37457358820, está en HYDRA-0062. All SPLUS information is in the interesante-objeto_gaia.tab file.
+
+
+#########################################################################################
+Probando el algoritma para recurar la emissión de Ha en S-PLUS##########################
+#########################################################################################
+Haciendo algunos testes:
+Seyfert2: 2MFGC 913, (18.3877629343,  +0.4967191726), debe estar en el campo; STRIPE82-0028
+
+-) Estas imagenes son del tipo .fz, hay que descompactar usando: funpack *.fz
+
+-) Cortando las imágenes usando el programa: cut-images-fits.py. En este programa crop_radius = 90*u.arcsec = 991.276arc de uno de los lados.
+
+-) Hice unas modificaiones al programa de Kadu para automatizarlo aún más, para correr simplemente hay que hacer: "python Pne-halpha-luis.py STRIPE82-0164 --source 39866".
+  --) Hay que especificar el tile y la fuente y esta última sólo para guardar el archivo con el nombre de la fuente.
+  --) será posible entrar al disco externo con python? tengo poco espacio en mi latop.
+
+-) Intent recuperar la emission Halpha de:
+   :) SPLUS.STRIPE82-0026.0000019213.griz, Halpha emission? No
+   :) SPLUS.STRIPE82-0028.0000008144.griz, Halpah emission? No
+   :) SPLUS.STRIPE82-0064.0000025232.griz, Halpah emission? No
+   :) SPLUS.STRIPE82-0164.0000039866.griz, Halpha emission? No
+   :) SPLUS.STRIPE82-0034.0000028332.griz, Halpha emission? No
+   :) SPLUS.STRIPE82-0036.0000002566.griz, Halpha emission? No. Hay una cosa que emite mucho en Halpha, pero comparando todos los tres filtros, probablemte es una cosa rara y mal con la fotometría.
+   :) SPLUS.STRIPE82-0043.0000014591.griz, Halpha emission? No. pero hay una estrellita bien brillante en él que obviamente se quitado todo el continuo, eso es bueno, muy parecido con el campo en el que se encuentra jacoby 1 en JPLUS.
+   :) SPLUS.STRIPE82-0048.0000012148.griz, Halpha emission? No
+   :) SPLUS.STRIPE82-0048.0000021068.griz, Halpha emission? No
+   :) SPLUS.STRIPE82-0111.0000014951.griz, Halpha emission? No?, pero parece que hay una inmensa estructura que emite en halpha. Probablemente sera bueno correr el programa a todo el campo.
+   :) SPLUS.STRIPE82-0115.0000040262.griz, Halpha emission? No, pero parece que también hay una estructura que emite en Halpha.
+   :) SPLUS.STRIPE82-0117.0000024245.griz, Halpha emission? No
+   :) SPLUS.STRIPE82-0119.0000004222.griz, Halpha emission? No, hay una cosa que emite mucho en Halpha, (esto estará correcto?).
+   :) SPLUS.STRIPE82-0128.0000039700.griz, Halpha emission? NO, hay una estructura que emite en Halpa. --->> Arreglado. continua estando una estructura que emite en Halpha
+   ####################################################################################################
+   #Recuerda hay un objeto que parece tener una emission de Halpha muy debil en el campo STRIPE82-0034#
+   ####################################################################################################
+   
+-) Escribi unos nuevos programas basado en los anterios, esto para leer los nuevos ZP, los progrmas son (es mejor más automatizado aún): Pne-halpha-luis-newzp.py y misc_luis.py. El archivo con los nuevos ZP de Dr1 es: " ZPfiles_2020/SPLUS_DR1_Revised_ZPs.cat"
+
+-) Intenté extraer la emisión de los campos enteros, pero dio un error de memoria al correr el programa: "MemoryError".
+
+-) Hacer zoom centrado en algunos de las WD en el programa cut-*.py: crop_radius = 200*u.arcsec => SPLUS.STRIPE82-0128.0000039700.griz. 
+
+#######################################################################################################
+First case of scientific verification=>
+
+PN K 1-28 (158.62759 -29.18759), SPLUS.HYDRA-0054.0000056653.
+
+-) Para este corrí la antigua versión del programa (Pne-halpha-luis.py), porque los ZPs de cada campo están en archivos separados (son del tipo HYDRA-0054_ZP.cat).  
+
+##########################################################################################################
+# Probablemente hay que hacer      data *= np.power(10, -0.4 * (-25+zps) )[:, None, None] # Apply zero point
+# Para calcular el flujo correcto
+##########################################################################################################
+
+Tenía un error en el programa, los filtros estaban invertido, y parece que estaba substrayendo la emisión de Ha.  

@@ -1,0 +1,190 @@
+SIMPLE  =                    T / Standard FITS format                           BITPIX  =                    8 / Character data                                 NAXIS   =                    1 / Text string                                    NAXIS1  =                 7339 / Number of characters                           VOTMETA =                    T / Table metadata in VOTable format               EXTEND  =                    T / There are standard extensions                  COMMENT                                                                         COMMENT The data in this primary HDU consists of bytes which                    COMMENT comprise a VOTABLE document.                                            COMMENT The VOTable describes the metadata of the table contained               COMMENT in the following BINTABLE extension.                                    COMMENT Such a BINTABLE extension can be used on its own as a perfectly         COMMENT good table, but the information from this HDU may provide some          COMMENT useful additional metadata.                                             COMMENT There is one following BINTABLE.                                        NTABLE  =                    1 / Number of following BINTABLE HDUs              END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <?xml version='1.0' encoding='UTF-8'?>
+<VOTABLE version='1.1'>
+<!--
+ !  VOTable written by uk.ac.starlink.votable.FitsPlusTableWriter
+ !  Describes BINTABLE extensions in following HDUs
+ !-->
+<RESOURCE>
+<TABLE name="Joined" nrows="1">
+<PARAM arraysize="19" datatype="char" name="DATE-HDU" value="2020-02-05T19:26:50">
+<DESCRIPTION>Date of HDU creation (UTC)</DESCRIPTION>
+</PARAM>
+<PARAM datatype="double" name="STILVERS" value="3.1">
+<DESCRIPTION>Version of STIL software</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="42" datatype="char" name="STILCLAS" value="uk.ac.starlink.votable.FitsPlusTableWriter">
+<DESCRIPTION>Author class in STIL so</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="33" datatype="char" name="Match type" value="Pair match; Best match, symmetric">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="3" datatype="char" name="Match algorithm" value="Sky">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="82" datatype="char" name="Join Type" value="1 and 2 (An output row for each row represented in both input tables (INNER JOIN))">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="54" datatype="char" name="First input table" value="1: SPLUS_HYDRA_master_catalogue_iDR2_december_2019...."/>
+<PARAM arraysize="25" datatype="char" name="Second input table" value="4: interesante-objeto.dat"/>
+<FIELD arraysize="12" datatype="char" name="FIELD"/>
+<FIELD arraysize="34" datatype="char" name="ID"/>
+<FIELD datatype="double" name="RA"/>
+<FIELD datatype="double" name="Dec"/>
+<FIELD datatype="double" name="X"/>
+<FIELD datatype="double" name="Y"/>
+<FIELD datatype="int" name="ISOarea"/>
+<FIELD datatype="float" name="s2nDet"/>
+<FIELD datatype="short" name="PhotoFlag"/>
+<FIELD datatype="float" name="FWHM"/>
+<FIELD datatype="float" name="FWHM_n"/>
+<FIELD datatype="float" name="MUMAX"/>
+<FIELD datatype="float" name="A"/>
+<FIELD datatype="float" name="B"/>
+<FIELD datatype="float" name="THETA"/>
+<FIELD datatype="double" name="FlRadDet"/>
+<FIELD datatype="float" name="KrRadDet"/>
+<FIELD datatype="short" name="nDet_auto"/>
+<FIELD datatype="short" name="nDet_petro"/>
+<FIELD datatype="short" name="nDet_aper"/>
+<FIELD datatype="float" name="uJAVA_auto"/>
+<FIELD datatype="float" name="euJAVA_auto"/>
+<FIELD datatype="float" name="s2n_uJAVA_auto"/>
+<FIELD datatype="float" name="uJAVA_petro"/>
+<FIELD datatype="float" name="euJAVA_petro"/>
+<FIELD datatype="float" name="s2n_uJAVA_petro"/>
+<FIELD datatype="float" name="uJAVA_aper"/>
+<FIELD datatype="float" name="euJAVA_aper"/>
+<FIELD datatype="float" name="s2n_uJAVA_aper"/>
+<FIELD datatype="float" name="F378_auto"/>
+<FIELD datatype="float" name="eF378_auto"/>
+<FIELD datatype="float" name="s2n_F378_auto"/>
+<FIELD datatype="float" name="F378_petro"/>
+<FIELD datatype="float" name="eF378_petro"/>
+<FIELD datatype="float" name="s2n_F378_petro"/>
+<FIELD datatype="float" name="F378_aper"/>
+<FIELD datatype="float" name="eF378_aper"/>
+<FIELD datatype="float" name="s2n_F378_aper"/>
+<FIELD datatype="float" name="F395_auto"/>
+<FIELD datatype="float" name="eF395_auto"/>
+<FIELD datatype="float" name="s2n_F395_auto"/>
+<FIELD datatype="float" name="F395_petro"/>
+<FIELD datatype="float" name="eF395_petro"/>
+<FIELD datatype="float" name="s2n_F395_petro"/>
+<FIELD datatype="float" name="F395_aper"/>
+<FIELD datatype="float" name="eF395_aper"/>
+<FIELD datatype="float" name="s2n_F395_aper"/>
+<FIELD datatype="float" name="F410_auto"/>
+<FIELD datatype="float" name="eF410_auto"/>
+<FIELD datatype="float" name="s2n_F410_auto"/>
+<FIELD datatype="float" name="F410_petro"/>
+<FIELD datatype="float" name="eF410_petro"/>
+<FIELD datatype="float" name="s2n_F410_petro"/>
+<FIELD datatype="float" name="F410_aper"/>
+<FIELD datatype="float" name="eF410_aper"/>
+<FIELD datatype="float" name="s2n_F410_aper"/>
+<FIELD datatype="float" name="F430_auto"/>
+<FIELD datatype="float" name="eF430_auto"/>
+<FIELD datatype="float" name="s2n_F430_auto"/>
+<FIELD datatype="float" name="F430_petro"/>
+<FIELD datatype="float" name="eF430_petro"/>
+<FIELD datatype="float" name="s2n_F430_petro"/>
+<FIELD datatype="float" name="F430_aper"/>
+<FIELD datatype="float" name="eF430_aper"/>
+<FIELD datatype="float" name="s2n_F430_aper"/>
+<FIELD datatype="float" name="g_auto"/>
+<FIELD datatype="float" name="eg_auto"/>
+<FIELD datatype="float" name="s2n_g_auto"/>
+<FIELD datatype="float" name="g_petro"/>
+<FIELD datatype="float" name="eg_petro"/>
+<FIELD datatype="float" name="s2n_g_petro"/>
+<FIELD datatype="float" name="g_aper"/>
+<FIELD datatype="float" name="eg_aper"/>
+<FIELD datatype="float" name="s2n_g_aper"/>
+<FIELD datatype="float" name="F515_auto"/>
+<FIELD datatype="float" name="eF515_auto"/>
+<FIELD datatype="float" name="s2n_F515_auto"/>
+<FIELD datatype="float" name="F515_petro"/>
+<FIELD datatype="float" name="eF515_petro"/>
+<FIELD datatype="float" name="s2n_F515_petro"/>
+<FIELD datatype="float" name="F515_aper"/>
+<FIELD datatype="float" name="eF515_aper"/>
+<FIELD datatype="float" name="s2n_F515_aper"/>
+<FIELD datatype="float" name="r_auto"/>
+<FIELD datatype="float" name="er_auto"/>
+<FIELD datatype="float" name="s2n_r_auto"/>
+<FIELD datatype="float" name="r_petro"/>
+<FIELD datatype="float" name="er_petro"/>
+<FIELD datatype="float" name="s2n_r_petro"/>
+<FIELD datatype="float" name="r_aper"/>
+<FIELD datatype="float" name="er_aper"/>
+<FIELD datatype="float" name="s2n_r_aper"/>
+<FIELD datatype="float" name="F660_auto"/>
+<FIELD datatype="float" name="eF660_auto"/>
+<FIELD datatype="float" name="s2n_F660_auto"/>
+<FIELD datatype="float" name="F660_petro"/>
+<FIELD datatype="float" name="eF660_petro"/>
+<FIELD datatype="float" name="s2n_F660_petro"/>
+<FIELD datatype="float" name="F660_aper"/>
+<FIELD datatype="float" name="eF660_aper"/>
+<FIELD datatype="float" name="s2n_F660_aper"/>
+<FIELD datatype="float" name="i_auto"/>
+<FIELD datatype="float" name="ei_auto"/>
+<FIELD datatype="float" name="s2n_i_auto"/>
+<FIELD datatype="float" name="i_petro"/>
+<FIELD datatype="float" name="ei_petro"/>
+<FIELD datatype="float" name="s2n_i_petro"/>
+<FIELD datatype="float" name="i_aper"/>
+<FIELD datatype="float" name="ei_aper"/>
+<FIELD datatype="float" name="s2n_i_aper"/>
+<FIELD datatype="float" name="F861_auto"/>
+<FIELD datatype="float" name="eF861_auto"/>
+<FIELD datatype="float" name="s2n_F861_auto"/>
+<FIELD datatype="float" name="F861_petro"/>
+<FIELD datatype="float" name="eF861_petro"/>
+<FIELD datatype="float" name="s2n_F861_petro"/>
+<FIELD datatype="float" name="F861_aper"/>
+<FIELD datatype="float" name="eF861_aper"/>
+<FIELD datatype="float" name="s2n_F861_aper"/>
+<FIELD datatype="float" name="z_auto"/>
+<FIELD datatype="float" name="ez_auto"/>
+<FIELD datatype="float" name="s2n_z_auto"/>
+<FIELD datatype="float" name="z_petro"/>
+<FIELD datatype="float" name="ez_petro"/>
+<FIELD datatype="float" name="s2n_z_petro"/>
+<FIELD datatype="float" name="z_aper"/>
+<FIELD datatype="float" name="ez_aper"/>
+<FIELD datatype="float" name="s2n_z_aper"/>
+<FIELD datatype="double" name="col1"/>
+<FIELD datatype="double" name="col2"/>
+<FIELD datatype="double" name="Separation" ucd="pos.angDistance" unit="arcsec">
+<DESCRIPTION>Distance between matched objects along a great circle</DESCRIPTION>
+</FIELD>
+<!-- Dummy VOTable - no DATA element -->
+</TABLE>
+</RESOURCE>
+</VOTABLE>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     XTENSION= 'BINTABLE'           / binary table extension                         BITPIX  =                    8 / 8-bit bytes                                    NAXIS   =                    2 / 2-dimensional table                            NAXIS1  =                  586 / width of table in bytes                        NAXIS2  =                    1 / number of rows in table                        PCOUNT  =                    0 / size of special data area                      GCOUNT  =                    1 / one data group                                 TFIELDS =                  131 / number of columns                              EXTNAME = 'Joined  '           / table name                                     TTYPE1  = 'FIELD   '           / label for column 1                             TFORM1  = '12A     '           / format for column 1                            TTYPE2  = 'ID      '           / label for column 2                             TFORM2  = '34A     '           / format for column 2                            TTYPE3  = 'RA      '           / label for column 3                             TFORM3  = 'D       '           / format for column 3                            TTYPE4  = 'Dec     '           / label for column 4                             TFORM4  = 'D       '           / format for column 4                            TTYPE5  = 'X       '           / label for column 5                             TFORM5  = 'D       '           / format for column 5                            TTYPE6  = 'Y       '           / label for column 6                             TFORM6  = 'D       '           / format for column 6                            TTYPE7  = 'ISOarea '           / label for column 7                             TFORM7  = 'J       '           / format for column 7                            TTYPE8  = 's2nDet  '           / label for column 8                             TFORM8  = 'E       '           / format for column 8                            TTYPE9  = 'PhotoFlag'          / label for column 9                             TFORM9  = 'I       '           / format for column 9                            TTYPE10 = 'FWHM    '           / label for column 10                            TFORM10 = 'E       '           / format for column 10                           TTYPE11 = 'FWHM_n  '           / label for column 11                            TFORM11 = 'E       '           / format for column 11                           TTYPE12 = 'MUMAX   '           / label for column 12                            TFORM12 = 'E       '           / format for column 12                           TTYPE13 = 'A       '           / label for column 13                            TFORM13 = 'E       '           / format for column 13                           TTYPE14 = 'B       '           / label for column 14                            TFORM14 = 'E       '           / format for column 14                           TTYPE15 = 'THETA   '           / label for column 15                            TFORM15 = 'E       '           / format for column 15                           TTYPE16 = 'FlRadDet'           / label for column 16                            TFORM16 = 'D       '           / format for column 16                           TTYPE17 = 'KrRadDet'           / label for column 17                            TFORM17 = 'E       '           / format for column 17                           TTYPE18 = 'nDet_auto'          / label for column 18                            TFORM18 = 'I       '           / format for column 18                           TTYPE19 = 'nDet_petro'         / label for column 19                            TFORM19 = 'I       '           / format for column 19                           TTYPE20 = 'nDet_aper'          / label for column 20                            TFORM20 = 'I       '           / format for column 20                           TTYPE21 = 'uJAVA_auto'         / label for column 21                            TFORM21 = 'E       '           / format for column 21                           TTYPE22 = 'euJAVA_auto'        / label for column 22                            TFORM22 = 'E       '           / format for column 22                           TTYPE23 = 's2n_uJAVA_auto'     / label for column 23                            TFORM23 = 'E       '           / format for column 23                           TTYPE24 = 'uJAVA_petro'        / label for column 24                            TFORM24 = 'E       '           / format for column 24                           TTYPE25 = 'euJAVA_petro'       / label for column 25                            TFORM25 = 'E       '           / format for column 25                           TTYPE26 = 's2n_uJAVA_petro'    / label for column 26                            TFORM26 = 'E       '           / format for column 26                           TTYPE27 = 'uJAVA_aper'         / label for column 27                            TFORM27 = 'E       '           / format for column 27                           TTYPE28 = 'euJAVA_aper'        / label for column 28                            TFORM28 = 'E       '           / format for column 28                           TTYPE29 = 's2n_uJAVA_aper'     / label for column 29                            TFORM29 = 'E       '           / format for column 29                           TTYPE30 = 'F378_auto'          / label for column 30                            TFORM30 = 'E       '           / format for column 30                           TTYPE31 = 'eF378_auto'         / label for column 31                            TFORM31 = 'E       '           / format for column 31                           TTYPE32 = 's2n_F378_auto'      / label for column 32                            TFORM32 = 'E       '           / format for column 32                           TTYPE33 = 'F378_petro'         / label for column 33                            TFORM33 = 'E       '           / format for column 33                           TTYPE34 = 'eF378_petro'        / label for column 34                            TFORM34 = 'E       '           / format for column 34                           TTYPE35 = 's2n_F378_petro'     / label for column 35                            TFORM35 = 'E       '           / format for column 35                           TTYPE36 = 'F378_aper'          / label for column 36                            TFORM36 = 'E       '           / format for column 36                           TTYPE37 = 'eF378_aper'         / label for column 37                            TFORM37 = 'E       '           / format for column 37                           TTYPE38 = 's2n_F378_aper'      / label for column 38                            TFORM38 = 'E       '           / format for column 38                           TTYPE39 = 'F395_auto'          / label for column 39                            TFORM39 = 'E       '           / format for column 39                           TTYPE40 = 'eF395_auto'         / label for column 40                            TFORM40 = 'E       '           / format for column 40                           TTYPE41 = 's2n_F395_auto'      / label for column 41                            TFORM41 = 'E       '           / format for column 41                           TTYPE42 = 'F395_petro'         / label for column 42                            TFORM42 = 'E       '           / format for column 42                           TTYPE43 = 'eF395_petro'        / label for column 43                            TFORM43 = 'E       '           / format for column 43                           TTYPE44 = 's2n_F395_petro'     / label for column 44                            TFORM44 = 'E       '           / format for column 44                           TTYPE45 = 'F395_aper'          / label for column 45                            TFORM45 = 'E       '           / format for column 45                           TTYPE46 = 'eF395_aper'         / label for column 46                            TFORM46 = 'E       '           / format for column 46                           TTYPE47 = 's2n_F395_aper'      / label for column 47                            TFORM47 = 'E       '           / format for column 47                           TTYPE48 = 'F410_auto'          / label for column 48                            TFORM48 = 'E       '           / format for column 48                           TTYPE49 = 'eF410_auto'         / label for column 49                            TFORM49 = 'E       '           / format for column 49                           TTYPE50 = 's2n_F410_auto'      / label for column 50                            TFORM50 = 'E       '           / format for column 50                           TTYPE51 = 'F410_petro'         / label for column 51                            TFORM51 = 'E       '           / format for column 51                           TTYPE52 = 'eF410_petro'        / label for column 52                            TFORM52 = 'E       '           / format for column 52                           TTYPE53 = 's2n_F410_petro'     / label for column 53                            TFORM53 = 'E       '           / format for column 53                           TTYPE54 = 'F410_aper'          / label for column 54                            TFORM54 = 'E       '           / format for column 54                           TTYPE55 = 'eF410_aper'         / label for column 55                            TFORM55 = 'E       '           / format for column 55                           TTYPE56 = 's2n_F410_aper'      / label for column 56                            TFORM56 = 'E       '           / format for column 56                           TTYPE57 = 'F430_auto'          / label for column 57                            TFORM57 = 'E       '           / format for column 57                           TTYPE58 = 'eF430_auto'         / label for column 58                            TFORM58 = 'E       '           / format for column 58                           TTYPE59 = 's2n_F430_auto'      / label for column 59                            TFORM59 = 'E       '           / format for column 59                           TTYPE60 = 'F430_petro'         / label for column 60                            TFORM60 = 'E       '           / format for column 60                           TTYPE61 = 'eF430_petro'        / label for column 61                            TFORM61 = 'E       '           / format for column 61                           TTYPE62 = 's2n_F430_petro'     / label for column 62                            TFORM62 = 'E       '           / format for column 62                           TTYPE63 = 'F430_aper'          / label for column 63                            TFORM63 = 'E       '           / format for column 63                           TTYPE64 = 'eF430_aper'         / label for column 64                            TFORM64 = 'E       '           / format for column 64                           TTYPE65 = 's2n_F430_aper'      / label for column 65                            TFORM65 = 'E       '           / format for column 65                           TTYPE66 = 'g_auto  '           / label for column 66                            TFORM66 = 'E       '           / format for column 66                           TTYPE67 = 'eg_auto '           / label for column 67                            TFORM67 = 'E       '           / format for column 67                           TTYPE68 = 's2n_g_auto'         / label for column 68                            TFORM68 = 'E       '           / format for column 68                           TTYPE69 = 'g_petro '           / label for column 69                            TFORM69 = 'E       '           / format for column 69                           TTYPE70 = 'eg_petro'           / label for column 70                            TFORM70 = 'E       '           / format for column 70                           TTYPE71 = 's2n_g_petro'        / label for column 71                            TFORM71 = 'E       '           / format for column 71                           TTYPE72 = 'g_aper  '           / label for column 72                            TFORM72 = 'E       '           / format for column 72                           TTYPE73 = 'eg_aper '           / label for column 73                            TFORM73 = 'E       '           / format for column 73                           TTYPE74 = 's2n_g_aper'         / label for column 74                            TFORM74 = 'E       '           / format for column 74                           TTYPE75 = 'F515_auto'          / label for column 75                            TFORM75 = 'E       '           / format for column 75                           TTYPE76 = 'eF515_auto'         / label for column 76                            TFORM76 = 'E       '           / format for column 76                           TTYPE77 = 's2n_F515_auto'      / label for column 77                            TFORM77 = 'E       '           / format for column 77                           TTYPE78 = 'F515_petro'         / label for column 78                            TFORM78 = 'E       '           / format for column 78                           TTYPE79 = 'eF515_petro'        / label for column 79                            TFORM79 = 'E       '           / format for column 79                           TTYPE80 = 's2n_F515_petro'     / label for column 80                            TFORM80 = 'E       '           / format for column 80                           TTYPE81 = 'F515_aper'          / label for column 81                            TFORM81 = 'E       '           / format for column 81                           TTYPE82 = 'eF515_aper'         / label for column 82                            TFORM82 = 'E       '           / format for column 82                           TTYPE83 = 's2n_F515_aper'      / label for column 83                            TFORM83 = 'E       '           / format for column 83                           TTYPE84 = 'r_auto  '           / label for column 84                            TFORM84 = 'E       '           / format for column 84                           TTYPE85 = 'er_auto '           / label for column 85                            TFORM85 = 'E       '           / format for column 85                           TTYPE86 = 's2n_r_auto'         / label for column 86                            TFORM86 = 'E       '           / format for column 86                           TTYPE87 = 'r_petro '           / label for column 87                            TFORM87 = 'E       '           / format for column 87                           TTYPE88 = 'er_petro'           / label for column 88                            TFORM88 = 'E       '           / format for column 88                           TTYPE89 = 's2n_r_petro'        / label for column 89                            TFORM89 = 'E       '           / format for column 89                           TTYPE90 = 'r_aper  '           / label for column 90                            TFORM90 = 'E       '           / format for column 90                           TTYPE91 = 'er_aper '           / label for column 91                            TFORM91 = 'E       '           / format for column 91                           TTYPE92 = 's2n_r_aper'         / label for column 92                            TFORM92 = 'E       '           / format for column 92                           TTYPE93 = 'F660_auto'          / label for column 93                            TFORM93 = 'E       '           / format for column 93                           TTYPE94 = 'eF660_auto'         / label for column 94                            TFORM94 = 'E       '           / format for column 94                           TTYPE95 = 's2n_F660_auto'      / label for column 95                            TFORM95 = 'E       '           / format for column 95                           TTYPE96 = 'F660_petro'         / label for column 96                            TFORM96 = 'E       '           / format for column 96                           TTYPE97 = 'eF660_petro'        / label for column 97                            TFORM97 = 'E       '           / format for column 97                           TTYPE98 = 's2n_F660_petro'     / label for column 98                            TFORM98 = 'E       '           / format for column 98                           TTYPE99 = 'F660_aper'          / label for column 99                            TFORM99 = 'E       '           / format for column 99                           TTYPE100= 'eF660_aper'         / label for column 100                           TFORM100= 'E       '           / format for column 100                          TTYPE101= 's2n_F660_aper'      / label for column 101                           TFORM101= 'E       '           / format for column 101                          TTYPE102= 'i_auto  '           / label for column 102                           TFORM102= 'E       '           / format for column 102                          TTYPE103= 'ei_auto '           / label for column 103                           TFORM103= 'E       '           / format for column 103                          TTYPE104= 's2n_i_auto'         / label for column 104                           TFORM104= 'E       '           / format for column 104                          TTYPE105= 'i_petro '           / label for column 105                           TFORM105= 'E       '           / format for column 105                          TTYPE106= 'ei_petro'           / label for column 106                           TFORM106= 'E       '           / format for column 106                          TTYPE107= 's2n_i_petro'        / label for column 107                           TFORM107= 'E       '           / format for column 107                          TTYPE108= 'i_aper  '           / label for column 108                           TFORM108= 'E       '           / format for column 108                          TTYPE109= 'ei_aper '           / label for column 109                           TFORM109= 'E       '           / format for column 109                          TTYPE110= 's2n_i_aper'         / label for column 110                           TFORM110= 'E       '           / format for column 110                          TTYPE111= 'F861_auto'          / label for column 111                           TFORM111= 'E       '           / format for column 111                          TTYPE112= 'eF861_auto'         / label for column 112                           TFORM112= 'E       '           / format for column 112                          TTYPE113= 's2n_F861_auto'      / label for column 113                           TFORM113= 'E       '           / format for column 113                          TTYPE114= 'F861_petro'         / label for column 114                           TFORM114= 'E       '           / format for column 114                          TTYPE115= 'eF861_petro'        / label for column 115                           TFORM115= 'E       '           / format for column 115                          TTYPE116= 's2n_F861_petro'     / label for column 116                           TFORM116= 'E       '           / format for column 116                          TTYPE117= 'F861_aper'          / label for column 117                           TFORM117= 'E       '           / format for column 117                          TTYPE118= 'eF861_aper'         / label for column 118                           TFORM118= 'E       '           / format for column 118                          TTYPE119= 's2n_F861_aper'      / label for column 119                           TFORM119= 'E       '           / format for column 119                          TTYPE120= 'z_auto  '           / label for column 120                           TFORM120= 'E       '           / format for column 120                          TTYPE121= 'ez_auto '           / label for column 121                           TFORM121= 'E       '           / format for column 121                          TTYPE122= 's2n_z_auto'         / label for column 122                           TFORM122= 'E       '           / format for column 122                          TTYPE123= 'z_petro '           / label for column 123                           TFORM123= 'E       '           / format for column 123                          TTYPE124= 'ez_petro'           / label for column 124                           TFORM124= 'E       '           / format for column 124                          TTYPE125= 's2n_z_petro'        / label for column 125                           TFORM125= 'E       '           / format for column 125                          TTYPE126= 'z_aper  '           / label for column 126                           TFORM126= 'E       '           / format for column 126                          TTYPE127= 'ez_aper '           / label for column 127                           TFORM127= 'E       '           / format for column 127                          TTYPE128= 's2n_z_aper'         / label for column 128                           TFORM128= 'E       '           / format for column 128                          TTYPE129= 'col1    '           / label for column 129                           TFORM129= 'D       '           / format for column 129                          TTYPE130= 'col2    '           / label for column 130                           TFORM130= 'D       '           / format for column 130                          TTYPE131= 'Separation'         / label for column 131                           TFORM131= 'D       '           / format for column 131                          TUNIT131= 'arcsec  '           / units for column 131                           TCOMM131= 'Distance between matched objects along a great circle'               TUCD131 = 'pos.angDistance'                                                     DATE-HDU= '2020-07-08T19:54:05' / Date of HDU creation (UTC)                    STILVERS= '3.1-2   '           / Version of STIL software                       STILCLAS= 'uk.ac.starlink.votable.FitsPlusTableWriter' / Author class in STIL soEND                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             HYDRA-0062  SPLUS.HYDRA-0062.0000053352.griz  @cáà„hÑ¿>_‚Ç@∑Ä@ë	\(ı¬è@¿¡M≤-V   }C =  @Ç=q@ £◊AlÃÕ@j·H@(ı√B-◊
+@ ◊
+=p£◊? =q   AòQÏ=#◊
+A»  Añ(ˆ=u¬èAñffAúff=LÃÕAª33Añı√=∏QÏAH  Añ(ˆ>ôö@  Aöff=£◊
+AX  Aòè\>#◊
+@÷ffAñQÏ>kÖ@ñffAöÃÕ>∏AÃÕAïp§=·GÆA   Aîff>8QÏ@√33Aò∏R=ÃÃÕA1ôöAï∏=ÃÃÕA333Aì33>\)@Û33Aò  =£◊
+ANffAëp§<£◊
+B333AèÖ<ı¬èA¸ÃÕAî=q<£◊
+BIôöAèôö=LÃÕAæffAç◊
+=è\)AÇffAíQÏ=#◊
+Aÿ  Aå(ˆ<£◊
+B•ÃÕAâÎÖ<£◊
+By33Aè∏<£◊
+BÆÃÕAå{<£◊
+Bâ33Aâ\)<£◊
+BZ  Aè∏<£◊
+BèffAâÆ<£◊
+B…ffAáGÆ<£◊
+BüôöAå∏R<£◊
+BÕÃÕAâ◊
+<£◊
+B6ffAá∏<ı¬èB33Aåff<£◊
+BNffAâ∏<£◊
+BnffAÜè\<£◊
+B1ôöAå  <£◊
+BÑôö@cáâI†¿>_‰ˇCÆ?∆7èe˛…                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

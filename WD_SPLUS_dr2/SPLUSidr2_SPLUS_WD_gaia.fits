@@ -1,0 +1,935 @@
+SIMPLE  =                    T / Standard FITS format                           BITPIX  =                    8 / Character data                                 NAXIS   =                    1 / Text string                                    NAXIS1  =                27649 / Number of characters                           VOTMETA =                    T / Table metadata in VOTable format               EXTEND  =                    T / There are standard extensions                  COMMENT                                                                         COMMENT The data in this primary HDU consists of bytes which                    COMMENT comprise a VOTABLE document.                                            COMMENT The VOTable describes the metadata of the table contained               COMMENT in the following BINTABLE extension.                                    COMMENT Such a BINTABLE extension can be used on its own as a perfectly         COMMENT good table, but the information from this HDU may provide some          COMMENT useful additional metadata.                                             COMMENT There is one following BINTABLE.                                        NTABLE  =                    1 / Number of following BINTABLE HDUs              END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <?xml version='1.0' encoding='UTF-8'?>
+<VOTABLE version='1.1'>
+<!--
+ !  VOTable written by uk.ac.starlink.votable.FitsPlusTableWriter
+ !  Describes BINTABLE extensions in following HDUs
+ !-->
+<RESOURCE>
+<TABLE name="Joined" nrows="15">
+<DESCRIPTION>
+###############################################################################
+#    This proprietary file was created by the S-PLUS collaboration.
+#    - website: http://www.splus.iag.usp.br
+###############################################################################
+#    This catalogue provides an Aperture-matched
+#    PSF-corrected Multi-band Photometry.
+#
+#=============================================================================
+#    General comments:
+#    --------------------------
+#    - This is a NOT magnitude-limited catalogue.
+#    - Only sources detected in at least 3 bands within r_auto are kept.
+#    - Non-detected sources are set to magnitude m = 99.00. Corresponding
+#      uncertainties replaced by a 2-sigma upper-limit and
+#      signal-to-noise = -1.00 (e.g., m=99.00, em=23.50, s2n=-1.00).
+#    - Non-observed sources are set to magnitude m = -99.00. Corresponding
+#      uncertainties set to 0.00 and signal-to-noise = -1.00
+#      (e.g., m=-99.00, em=0.00, s2n=-1.00).
+#    - Sources are detected on a weighted-combination of griz bands.
+#    - Absolute calibration tighten to Gaia G-band using SPLUS aper-apertures.
+#    - Image reduction performed using Jype pipeline (Cenarro+18: arxiv.org/pdf/1804.02667.pdf).
+#
+#=============================================================================
+#   Filter System (12): http://www.splus.iag.usp.br/camera-and-filters/
+#    - Broad-bands  (5): u, g, r, i, z
+#    - Narrow-bands (7): F378, F395, F410, F430, F515, F660, F861
+#
+#=============================================================================
+#    Photometry performed within 3 types of apertures:
+#    - AUTO:  total-restricted apertures (Molino+17).
+#             Best for SED-fitting (e.g., photo-z) since they keep a high S/N across filters.
+#    - PETRO: total apertures integrating most light. Lower S/N than AUTO.
+#             Best for the estimation of physical properties of sources.
+#    - APER:  circular fixed apertures of 3" diameter.
+#             Best for calibration and comparison with other datasets.
+#
+#=============================================================================
+#    Photometric redshifts:
+#    -------------------------------
+#      NO PHOTOMETRIC REDSHIFTS IN THE PHOTOMETRIC CATALOGUES
+#
+#=============================================================================
+#   The star/galaxy classification:
+#    -------------------------------
+#      NO STAR/GALAXY CLASSIFICATION IN THE PHOTOMETRIC CATALOGUES
+#
+###############################################################################
+#   iDR2: Dec, 2019
+#   Any further information, please contact with:
+#      * General             :   Claudia Mendes de Oliveira     &lt;claudia.oliveira@iag.usp.br&gt;
+#      * Image Reduction     :   F√É¬°bio R. Herpich               &lt;fabiorafaelh@gmail.com&gt;
+#      *                         Ariel Werle                    &lt;arielwrl@usp.br&gt;    
+#      * Photometry          :   Laura Maria Sampedro Hernandez &lt;lauramariash@gmail.com&gt;
+#      *                         Felipe de Almeida Fernandes    &lt;felipefer42@gmail.com&gt;
+#
+###############################################################################
+#
+   1 FIELD                 Stripe82 Field
+   2 ID                    Object ID Number on the corresponding Stripe82 field
+   3 RA                    Right Ascension in decimal degrees 
+   4 Dec                   Declination in decimal degrees
+   5 X                     X-pixel coordinate 
+   6 Y                     Y-pixel coordinate  
+   7 Aperture              Total-restricted Photometric Aperture (pixels) 
+   8 s2nDet                Signal-to-Noise on Detection Image (FLUX_AUTO/FLUXERR_AUTO) 
+   9 PhotoFlag             SExtractor Photometric Flag 
+  10 FWHM                  Full width at half maximum for detection image (pixels) 
+  11 FWHM_n                Normalized Full width at half maximum to detection image seeing (pixels)
+  12 MUMAX                 Peak Surface Brightness above background [mag x arcsec^{-2}]
+  13 A                     Profile RMS along major axis (pixels)
+  14 B                     Profile RMS along minor axis (pixels)
+  15 THETA                 Position Angle (CCW/x)
+  16 FlRadDet              Fraction-of-light radii (pixels)
+  17 KrRadDet              Kron apertures in units of A or B (pixels)
+  18 nDet_auto             Number of filters detected within auto aperture
+  19 nDet_petro            Number of filters detected within petro aperture
+  20 nDet_aper             Number of filters detected within aper aperture
+  21 uJAVA_auto            Total-restricted magnitude [AB]
+  22 euJAVA_auto           Total-restricted magnitude uncertainty [AB]
+  23 s2n_uJAVA_auto        Signal-to-noise of the detection within uJAVA_auto
+  24 uJAVA_petro           Total magnitude [AB]
+  25 euJAVA_petro          Total magnitude uncertainty [AB]
+  26 s2n_uJAVA_petro       Signal-to-noise of the detection within uJAVA_petro
+  27 uJAVA_aper            Circular-3arcsec-Diameter-Aperture magnitude [AB]
+  28 euJAVA_aper           Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+  29 s2n_uJAVA_aper        Signal-to-noise of the detection within uJAVA_aper
+  30 F378_auto             Total-restricted magnitude [AB]
+  31 eF378_auto            Total-restricted magnitude uncertainty [AB]
+  32 s2n_F378_auto         Signal-to-noise of the detection within F378_auto
+  33 F378_petro            Total magnitude [AB]
+  34 eF378_petro           Total magnitude uncertainty [AB]
+  35 s2n_F378_petro        Signal-to-noise of the detection within F0378_petro
+  36 F378_aper             Circular-3arcsec-Diameter-Aperture magnitude [AB]
+  37 eF378_aper            Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+  38 s2n_F378_aper         Signal-to-noise of the detection within F378_aper
+  39 F395_auto             Total-restricted magnitude [AB]
+  40 eF395_auto            Total-restricted magnitude uncertainty [AB]
+  41 s2n_F395_auto         Signal-to-noise of the detection within F395_auto
+  42 F395_petro            Total magnitude [AB]
+  43 eF395_petro           Total magnitude uncertainty [AB]
+  44 s2n_F395_petro        Signal-to-noise of the detection within F395_petro
+  45 F395_aper             Circular-3arcsec-Diameter-Aperture magnitude [AB]
+  46 eF395_aper            Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+  47 s2n_F395_aper         Signal-to-noise of the detection within F395_aper
+  48 F410_auto             Total-restricted magnitude [AB]
+  49 eF410_auto            Total-restricted magnitude uncertainty [AB]
+  50 s2n_F410_auto         Signal-to-noise of the detection within F410_auto
+  51 F410_petro            Total magnitude [AB]
+  52 eF410_petro           Total magnitude uncertainty [AB]
+  53 s2n_F410_petro        Signal-to-noise of the detection within F410_petro
+  54 F410_aper             Circular-3arcsec-Diameter-Aperture magnitude [AB]
+  55 eF410_aper            Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+  56 s2n_F410_aper         Signal-to-noise of the detection within F410_aper
+  57 F430_auto             Total-restricted magnitude [AB]
+  58 eF430_auto            Total-restricted magnitude uncertainty [AB]
+  59 s2n_F430_auto         Signal-to-noise of the detection within F430_auto
+  60 F430_petro            Total magnitude [AB]
+  61 eF430_petro           Total magnitude uncertainty [AB]
+  62 s2n_F430_petro        Signal-to-noise of the detection within F430_petro
+  63 F430_aper             Circular-3arcsec-Diameter-Aperture magnitude [AB]
+  64 eF430_aper            Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+  65 s2n_F430_aper         Signal-to-noise of the detection within F430_aper
+  66 g_auto                Total-restricted magnitude [AB]
+  67 eg_auto               Total-restricted magnitude uncertainty [AB]
+  68 s2n_g_auto            Signal-to-noise of the detection within g_auto
+  69 g_petro               Total magnitude [AB]
+  70 eg_petro              Total magnitude uncertainty [AB]
+  71 s2n_g_petro           Signal-to-noise of the detection within g_petro
+  72 g_aper                Circular-3arcsec-Diameter-Aperture magnitude [AB]
+  73 eg_aper               Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+  74 s2n_g_aper            Signal-to-noise of the detection within g_aper
+  75 F515_auto             Total-restricted magnitude [AB]
+  76 eF515_auto            Total-restricted magnitude uncertainty [AB]
+  77 s2n_F515_auto         Signal-to-noise of the detection within F515_auto
+  78 F515_petro            Total magnitude [AB]
+  79 eF515_petro           Total magnitude uncertainty [AB]
+  80 s2n_F515_petro        Signal-to-noise of the detection within F515_petro
+  81 F515_aper             Circular-3arcsec-Diameter-Aperture magnitude [AB]
+  82 eF515_aper            Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+  83 s2n_F515_aper         Signal-to-noise of the detection within F515_aper
+  84 r_auto                Total-restricted magnitude [AB]
+  85 er_auto               Total-restricted magnitude uncertainty [AB]
+  86 s2n_r_auto            Signal-to-noise of the detection within r_auto
+  87 r_petro               Total magnitude [AB]
+  88 er_petro              Total magnitude uncertainty [AB]
+  89 s2n_r_petro           Signal-to-noise of the detection within r_petro
+  90 r_aper                Circular-3arcsec-Diameter-Aperture magnitude [AB]
+  91 er_aper               Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+  92 s2n_r_aper            Signal-to-noise of the detection within r_aper
+  93 F660_auto             Total-restricted magnitude [AB]
+  94 eF660_auto            Total-restricted magnitude uncertainty [AB]
+  95 s2n_F660_auto         Signal-to-noise of the detection within F660_auto
+  96 F660_petro            Total magnitude [AB]
+  97 eF660_petro           Total magnitude uncertainty [AB]
+  98 s2n_F660_petro        Signal-to-noise of the detection within F660_petro
+  99 F660_aper             Circular-3arcsec-Diameter-Aperture magnitude [AB]
+ 100 eF660_aper            Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+ 101 s2n_F660_aper         Signal-to-noise of the detection within F660_aper
+ 102 i_auto                Total-restricted magnitude [AB]
+ 103 ei_auto               Total-restricted magnitude uncertainty [AB]
+ 104 s2n_i_auto            Signal-to-noise of the detection within i_auto
+ 105 i_petro               Total magnitude [AB]
+ 106 ei_petro              Total magnitude uncertainty [AB]
+ 107 s2n_i_petro           Signal-to-noise of the detection within i_petro
+ 108 i_aper                Circular-3arcsec-Diameter-Aperture magnitude [AB]
+ 109 ei_aper               Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+ 110 s2n_i_aper            Signal-to-noise of the detection within i_aper
+ 111 F861_auto             Total-restricted magnitude [AB]
+ 112 eF861_auto            Total-restricted magnitude uncertainty [AB]
+ 113 s2n_F861_auto         Signal-to-noise of the detection within F861_auto
+ 114 F861_petro            Total magnitude [AB]
+ 115 eF861_petro           Total magnitude uncertainty [AB]
+ 116 s2n_F861_petro        Signal-to-noise of the detection within F861_petro
+ 117 F861_aper             Circular-3arcsec-Diameter-Aperture magnitude [AB]
+ 118 eF861_aper            Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+ 119 s2n_F861_aper         Signal-to-noise of the detection within F861_aper
+ 120 z_auto                Total-restricted magnitude [AB]
+ 121 ez_auto               Total-restricted magnitude uncertainty [AB]
+ 122 s2n_z_auto            Signal-to-noise of the detection within z_auto
+ 123 z_petro               Total magnitude [AB]
+ 124 ez_petro              Total magnitude uncertainty [AB]
+ 125 s2n_z_petro           Signal-to-noise of the detection within z_petro
+ 126 z_aper                Circular-3arcsec-Diameter-Aperture magnitude [AB]
+ 127 ez_aper               Circular-3arcsec-Diameter-Aperture magnitude uncertainty [AB]
+ 128 s2n_z_aper            Signal-to-noise of the detection within z_aper
+</DESCRIPTION>
+<PARAM arraysize="19" datatype="char" name="DATE-HDU" value="2020-07-02T02:55:49">
+<DESCRIPTION>Date of HDU creation (UTC)</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="5" datatype="char" name="STILVERS" value="3.1-2">
+<DESCRIPTION>Version of STIL software</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="42" datatype="char" name="STILCLAS" value="uk.ac.starlink.votable.FitsPlusTableWriter">
+<DESCRIPTION>Author class in STIL so</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="33" datatype="char" name="Match type" value="Pair match; Best match, symmetric">
+<DESCRIPTION>Type of match which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="3" datatype="char" name="Match algorithm" value="Sky">
+<DESCRIPTION>Matching algorithm which created this table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="82" datatype="char" name="Join Type" value="1 and 2 (An output row for each row represented in both input tables (INNER JOIN))">
+<DESCRIPTION>Determines which rows appear in output table</DESCRIPTION>
+</PARAM>
+<PARAM arraysize="54" datatype="char" name="First input table" value="1: SPLUS_SPLUS_master_catalogue_iDR2_december_2019...."/>
+<PARAM arraysize="28" datatype="char" name="Second input table" value="2: gaia2wd_pwd075_bluer.fits"/>
+<FIELD arraysize="12" datatype="char" name="FIELD"/>
+<FIELD arraysize="34" datatype="char" name="ID"/>
+<FIELD datatype="double" name="RA"/>
+<FIELD datatype="double" name="Dec"/>
+<FIELD datatype="double" name="X"/>
+<FIELD datatype="double" name="Y"/>
+<FIELD datatype="int" name="ISOarea">
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="float" name="s2nDet"/>
+<FIELD datatype="short" name="PhotoFlag">
+<VALUES null='-32768'/>
+</FIELD>
+<FIELD datatype="float" name="FWHM"/>
+<FIELD datatype="float" name="FWHM_n"/>
+<FIELD datatype="float" name="MUMAX"/>
+<FIELD datatype="float" name="A"/>
+<FIELD datatype="float" name="B"/>
+<FIELD datatype="float" name="THETA"/>
+<FIELD datatype="double" name="FlRadDet"/>
+<FIELD datatype="float" name="KrRadDet"/>
+<FIELD datatype="short" name="nDet_auto">
+<VALUES null='-32768'/>
+</FIELD>
+<FIELD datatype="short" name="nDet_petro">
+<VALUES null='-32768'/>
+</FIELD>
+<FIELD datatype="short" name="nDet_aper">
+<VALUES null='-32768'/>
+</FIELD>
+<FIELD datatype="float" name="uJAVA_auto"/>
+<FIELD datatype="float" name="euJAVA_auto"/>
+<FIELD datatype="float" name="s2n_uJAVA_auto"/>
+<FIELD datatype="float" name="uJAVA_petro"/>
+<FIELD datatype="float" name="euJAVA_petro"/>
+<FIELD datatype="float" name="s2n_uJAVA_petro"/>
+<FIELD datatype="float" name="uJAVA_aper"/>
+<FIELD datatype="float" name="euJAVA_aper"/>
+<FIELD datatype="float" name="s2n_uJAVA_aper"/>
+<FIELD datatype="float" name="F378_auto"/>
+<FIELD datatype="float" name="eF378_auto"/>
+<FIELD datatype="float" name="s2n_F378_auto"/>
+<FIELD datatype="float" name="F378_petro"/>
+<FIELD datatype="float" name="eF378_petro"/>
+<FIELD datatype="float" name="s2n_F378_petro"/>
+<FIELD datatype="float" name="F378_aper"/>
+<FIELD datatype="float" name="eF378_aper"/>
+<FIELD datatype="float" name="s2n_F378_aper"/>
+<FIELD datatype="float" name="F395_auto"/>
+<FIELD datatype="float" name="eF395_auto"/>
+<FIELD datatype="float" name="s2n_F395_auto"/>
+<FIELD datatype="float" name="F395_petro"/>
+<FIELD datatype="float" name="eF395_petro"/>
+<FIELD datatype="float" name="s2n_F395_petro"/>
+<FIELD datatype="float" name="F395_aper"/>
+<FIELD datatype="float" name="eF395_aper"/>
+<FIELD datatype="float" name="s2n_F395_aper"/>
+<FIELD datatype="float" name="F410_auto"/>
+<FIELD datatype="float" name="eF410_auto"/>
+<FIELD datatype="float" name="s2n_F410_auto"/>
+<FIELD datatype="float" name="F410_petro"/>
+<FIELD datatype="float" name="eF410_petro"/>
+<FIELD datatype="float" name="s2n_F410_petro"/>
+<FIELD datatype="float" name="F410_aper"/>
+<FIELD datatype="float" name="eF410_aper"/>
+<FIELD datatype="float" name="s2n_F410_aper"/>
+<FIELD datatype="float" name="F430_auto"/>
+<FIELD datatype="float" name="eF430_auto"/>
+<FIELD datatype="float" name="s2n_F430_auto"/>
+<FIELD datatype="float" name="F430_petro"/>
+<FIELD datatype="float" name="eF430_petro"/>
+<FIELD datatype="float" name="s2n_F430_petro"/>
+<FIELD datatype="float" name="F430_aper"/>
+<FIELD datatype="float" name="eF430_aper"/>
+<FIELD datatype="float" name="s2n_F430_aper"/>
+<FIELD datatype="float" name="g_auto"/>
+<FIELD datatype="float" name="eg_auto"/>
+<FIELD datatype="float" name="s2n_g_auto"/>
+<FIELD datatype="float" name="g_petro"/>
+<FIELD datatype="float" name="eg_petro"/>
+<FIELD datatype="float" name="s2n_g_petro"/>
+<FIELD datatype="float" name="g_aper"/>
+<FIELD datatype="float" name="eg_aper"/>
+<FIELD datatype="float" name="s2n_g_aper"/>
+<FIELD datatype="float" name="F515_auto"/>
+<FIELD datatype="float" name="eF515_auto"/>
+<FIELD datatype="float" name="s2n_F515_auto"/>
+<FIELD datatype="float" name="F515_petro"/>
+<FIELD datatype="float" name="eF515_petro"/>
+<FIELD datatype="float" name="s2n_F515_petro"/>
+<FIELD datatype="float" name="F515_aper"/>
+<FIELD datatype="float" name="eF515_aper"/>
+<FIELD datatype="float" name="s2n_F515_aper"/>
+<FIELD datatype="float" name="r_auto"/>
+<FIELD datatype="float" name="er_auto"/>
+<FIELD datatype="float" name="s2n_r_auto"/>
+<FIELD datatype="float" name="r_petro"/>
+<FIELD datatype="float" name="er_petro"/>
+<FIELD datatype="float" name="s2n_r_petro"/>
+<FIELD datatype="float" name="r_aper"/>
+<FIELD datatype="float" name="er_aper"/>
+<FIELD datatype="float" name="s2n_r_aper"/>
+<FIELD datatype="float" name="F660_auto"/>
+<FIELD datatype="float" name="eF660_auto"/>
+<FIELD datatype="float" name="s2n_F660_auto"/>
+<FIELD datatype="float" name="F660_petro"/>
+<FIELD datatype="float" name="eF660_petro"/>
+<FIELD datatype="float" name="s2n_F660_petro"/>
+<FIELD datatype="float" name="F660_aper"/>
+<FIELD datatype="float" name="eF660_aper"/>
+<FIELD datatype="float" name="s2n_F660_aper"/>
+<FIELD datatype="float" name="i_auto"/>
+<FIELD datatype="float" name="ei_auto"/>
+<FIELD datatype="float" name="s2n_i_auto"/>
+<FIELD datatype="float" name="i_petro"/>
+<FIELD datatype="float" name="ei_petro"/>
+<FIELD datatype="float" name="s2n_i_petro"/>
+<FIELD datatype="float" name="i_aper"/>
+<FIELD datatype="float" name="ei_aper"/>
+<FIELD datatype="float" name="s2n_i_aper"/>
+<FIELD datatype="float" name="F861_auto"/>
+<FIELD datatype="float" name="eF861_auto"/>
+<FIELD datatype="float" name="s2n_F861_auto"/>
+<FIELD datatype="float" name="F861_petro"/>
+<FIELD datatype="float" name="eF861_petro"/>
+<FIELD datatype="float" name="s2n_F861_petro"/>
+<FIELD datatype="float" name="F861_aper"/>
+<FIELD datatype="float" name="eF861_aper"/>
+<FIELD datatype="float" name="s2n_F861_aper"/>
+<FIELD datatype="float" name="z_auto"/>
+<FIELD datatype="float" name="ez_auto"/>
+<FIELD datatype="float" name="s2n_z_auto"/>
+<FIELD datatype="float" name="z_petro"/>
+<FIELD datatype="float" name="ez_petro"/>
+<FIELD datatype="float" name="s2n_z_petro"/>
+<FIELD datatype="float" name="z_aper"/>
+<FIELD datatype="float" name="ez_aper"/>
+<FIELD datatype="float" name="s2n_z_aper"/>
+<FIELD datatype="int" name="recno" ucd="meta.record"/>
+<FIELD arraysize="1" datatype="char" name="Sp" ucd="meta.ref.url">
+<DESCRIPTION>indicates SDSS spectrum in gaiasdss</DESCRIPTION>
+</FIELD>
+<FIELD arraysize="23" datatype="char" name="WD" ucd="meta.id;meta.main">
+<DESCRIPTION>WD name (WDJHHMMSS.ss+DDMMSS.ss, J2000) (white_dwarf_name)</DESCRIPTION>
+</FIELD>
+<FIELD arraysize="28" datatype="char" name="DR2Name" ucd="meta.id">
+<DESCRIPTION>Unique Gaia source designation (designation)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="long" name="Source" ucd="meta.id">
+<DESCRIPTION>Unique Gaia source identifier (source_id)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="RA_ICRS" ucd="pos.eq.ra;meta.main" unit="deg">
+<DESCRIPTION>Gaia DR2 barycentric right ascension (ICRS) at epoch J2015.5 (ra)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_RA_ICRS" ucd="stat.error;pos.eq.ra" unit="mas">
+<DESCRIPTION>Standard error of right ascension (ra_error)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="DE_ICRS" ucd="pos.eq.dec;meta.main" unit="deg">
+<DESCRIPTION>Gaia DR2 barycentric declination (ICRS) at epoch J2015.5 (dec)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_DE_ICRS" ucd="stat.error;pos.eq.dec" unit="mas">
+<DESCRIPTION>Standard error of declination (dec_error)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="Plx" ucd="pos.parallax" unit="mas">
+<DESCRIPTION>Absolute stellar parallax of the source at J2015.5 (parallax)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_Plx" ucd="stat.error;pos.parallax" unit="mas">
+<DESCRIPTION>Standard error of parallax (parallax_error)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="pmRA" ucd="pos.pm;pos.eq.ra" unit="mas/yr">
+<DESCRIPTION>Proper motion in right ascension (pmRAxcosDE) (pmra)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_pmRA" ucd="stat.error;pos.pm;pos.eq.ra" unit="mas/yr">
+<DESCRIPTION>Standard error of proper motion in right ascension (pmra_error)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="pmDE" ucd="pos.pm;pos.eq.dec" unit="mas/yr">
+<DESCRIPTION>Proper motion in declination (pmdec)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_pmDE" ucd="stat.error;pos.pm;pos.eq.dec" unit="mas/yr">
+<DESCRIPTION>Standard error of proper motion in declination (pmdec_error)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="epsi" ucd="stat.fit.residual" unit="mas"/>
+<FIELD datatype="double" name="amax" ucd="pos" unit="mas"/>
+<FIELD datatype="double" name="FG" ucd="phot.flux;stat.mean;em.opt" unit="e-/s">
+<DESCRIPTION>Gaia G-band mean flux (phot_g_mean_flux)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_FG" unit="e-/s">
+<DESCRIPTION>Error on G-band mean flux (phot_g_mean_flux_error)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="Gmag_2" ucd="phot.mag;stat.mean;em.opt" unit="mag">
+<DESCRIPTION>Gaia G-band mean magnitude (Vega scale) (phot_g_mean_mag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="FBP" unit="e-/s">
+<DESCRIPTION>Integrated GBP mean flux (phot_bp_mean_flux)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_FBP" unit="e-/s">
+<DESCRIPTION>Error on GBP-band mean flux (phot_bp_mean_flux_error)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="BPmag" unit="mag">
+<DESCRIPTION>Gaia GBP-band mean magnitude (Vega scale) (phot_bp_mean_mag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="FRP" ucd="phot.flux.density;em.opt.R" unit="e-/s">
+<DESCRIPTION>Integrated GRP mean flux (phot_rp_mean_flux)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_FRP" unit="e-/s">
+<DESCRIPTION>Error on GRP-band mean flux (phot_rp_mean_flux_error)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="RPmag" unit="mag">
+<DESCRIPTION>Gaia GRP-band mean magnitude (Vega scale) (phot_rp_mean_mag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="E(BR/RP)" ucd="arith.factor"/>
+<FIELD datatype="double" name="GLON" ucd="pos.galactic.lon" unit="deg">
+<DESCRIPTION>Galactic longitude (l)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="GLAT" ucd="pos.galactic.lat" unit="deg">
+<DESCRIPTION>Galactic latitude (b)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="Density" ucd="meta.number"/>
+<FIELD datatype="double" name="AG" ucd="phys.absorption" unit="mag"/>
+<FIELD arraysize="19" datatype="char" name="SDSS" ucd="meta.id"/>
+<FIELD datatype="double" name="umag" ucd="phot.mag;em.opt.U" unit="mag">
+<DESCRIPTION>? SDSS u band magnitude (umag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_umag" ucd="stat.error;phot.mag;em.opt.U" unit="mag">
+<DESCRIPTION>? SDSS u band magnitude uncertainty (e_umag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="gmag_2a" ucd="phot.mag;em.opt.B" unit="mag">
+<DESCRIPTION>? SDSS g band magnitude (gmag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_gmag" ucd="stat.error;phot.mag;em.opt.B" unit="mag">
+<DESCRIPTION>? SDSS g band magnitude uncertainty (e_gmag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="rmag" ucd="phot.mag;em.opt.R" unit="mag">
+<DESCRIPTION>? SDSS r band magnitude (rmag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_rmag" ucd="stat.error;phot.mag;em.opt.R" unit="mag">
+<DESCRIPTION>? SDSS r band magnitude uncertainty (e_rmag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="imag" ucd="phot.mag;em.opt.I" unit="mag">
+<DESCRIPTION>? SDSS i band magnitude (imag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_imag" ucd="stat.error;phot.mag;em.opt.I" unit="mag">
+<DESCRIPTION>? SDSS i band magnitude uncertainty (e_imag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="zmag" ucd="phot.mag;em.opt.I" unit="mag">
+<DESCRIPTION>? SDSS z band magnitude (zmag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="e_zmag" ucd="stat.error;phot.mag;em.opt.I" unit="mag">
+<DESCRIPTION>? SDSS z band magnitude uncertainty (e_zmag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="Pwd" ucd="stat.fit.goodness">
+<DESCRIPTION>[0/1]? The probability of being a white dwarf (Pwd)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="short" name="f_Pwd" ucd="meta.code">
+<DESCRIPTION>[0/1] If 1 it indicates the PWD value could be unreliable (Pwd_flag)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="TeffH" ucd="phys.temperature.effective" unit="K"/>
+<FIELD datatype="double" name="e_TeffH" ucd="stat.error" unit="K">
+<DESCRIPTION>? Uncertainty on Teff_H (eTeff_H)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="loggH" ucd="phys.gravity"/>
+<FIELD datatype="double" name="e_loggH" ucd="stat.error">
+<DESCRIPTION>? Uncertainty on log_g_H (elog_g_H)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="MassH" ucd="phys.mass" unit="Msun"/>
+<FIELD datatype="double" name="e_MassH" ucd="stat.error" unit="Msun">
+<DESCRIPTION>? Uncertainty on the mass (emass_H)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="chi2H" ucd="stat.fit.chi2;stat.fit.param;meta.modelled">
+<DESCRIPTION>? chi2 value of the fit (pure-H) (chi2_H)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="TeffHe" ucd="phys.temperature.effective" unit="K"/>
+<FIELD datatype="double" name="e_TeffHe" ucd="stat.error" unit="K">
+<DESCRIPTION>? Uncertainty on Teff_He (eTeff_He)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="loggHe" ucd="phys.gravity"/>
+<FIELD datatype="double" name="e_loggHe" ucd="stat.error">
+<DESCRIPTION>? Uncertainty on log_g_He (elog_g_He)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="MassHe" ucd="phys.mass" unit="Msun"/>
+<FIELD datatype="double" name="e_MassHe" ucd="stat.error" unit="Msun">
+<DESCRIPTION>? Uncertainty on the mass (emass_He)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="chisqHe" ucd="stat.fit.chi2;stat.fit.param;meta.modelled">
+<DESCRIPTION>? chi2 value of the fit (pure-H) (chisq_He)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="_RA_icrs" ucd="pos.eq.ra" unit="deg"/>
+<FIELD datatype="double" name="_DE_icrs" ucd="pos.eq.dec" unit="deg">
+<DESCRIPTION>Declination (ICRS) at Epoch=J2000, proper motions taken into account</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="Separation" ucd="pos.angDistance" unit="arcsec">
+<DESCRIPTION>Distance between matched objects along a great circle</DESCRIPTION>
+</FIELD>
+<!-- Dummy VOTable - no DATA element -->
+</TABLE>
+</RESOURCE>
+</VOTABLE>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               XTENSION= 'BINTABLE'           / binary table extension                         BITPIX  =                    8 / 8-bit bytes                                    NAXIS   =                    2 / 2-dimensional table                            NAXIS1  =                 1079 / width of table in bytes                        NAXIS2  =                   15 / number of rows in table                        PCOUNT  =                    0 / size of special data area                      GCOUNT  =                    1 / one data group                                 TFIELDS =                  189 / number of columns                              EXTNAME = 'Joined  '           / table name                                     TTYPE1  = 'FIELD   '           / label for column 1                             TFORM1  = '12A     '           / format for column 1                            TTYPE2  = 'ID      '           / label for column 2                             TFORM2  = '34A     '           / format for column 2                            TTYPE3  = 'RA      '           / label for column 3                             TFORM3  = 'D       '           / format for column 3                            TTYPE4  = 'Dec     '           / label for column 4                             TFORM4  = 'D       '           / format for column 4                            TTYPE5  = 'X       '           / label for column 5                             TFORM5  = 'D       '           / format for column 5                            TTYPE6  = 'Y       '           / label for column 6                             TFORM6  = 'D       '           / format for column 6                            TTYPE7  = 'ISOarea '           / label for column 7                             TFORM7  = 'J       '           / format for column 7                            TTYPE8  = 's2nDet  '           / label for column 8                             TFORM8  = 'E       '           / format for column 8                            TTYPE9  = 'PhotoFlag'          / label for column 9                             TFORM9  = 'I       '           / format for column 9                            TTYPE10 = 'FWHM    '           / label for column 10                            TFORM10 = 'E       '           / format for column 10                           TTYPE11 = 'FWHM_n  '           / label for column 11                            TFORM11 = 'E       '           / format for column 11                           TTYPE12 = 'MUMAX   '           / label for column 12                            TFORM12 = 'E       '           / format for column 12                           TTYPE13 = 'A       '           / label for column 13                            TFORM13 = 'E       '           / format for column 13                           TTYPE14 = 'B       '           / label for column 14                            TFORM14 = 'E       '           / format for column 14                           TTYPE15 = 'THETA   '           / label for column 15                            TFORM15 = 'E       '           / format for column 15                           TTYPE16 = 'FlRadDet'           / label for column 16                            TFORM16 = 'D       '           / format for column 16                           TTYPE17 = 'KrRadDet'           / label for column 17                            TFORM17 = 'E       '           / format for column 17                           TTYPE18 = 'nDet_auto'          / label for column 18                            TFORM18 = 'I       '           / format for column 18                           TTYPE19 = 'nDet_petro'         / label for column 19                            TFORM19 = 'I       '           / format for column 19                           TTYPE20 = 'nDet_aper'          / label for column 20                            TFORM20 = 'I       '           / format for column 20                           TTYPE21 = 'uJAVA_auto'         / label for column 21                            TFORM21 = 'E       '           / format for column 21                           TTYPE22 = 'euJAVA_auto'        / label for column 22                            TFORM22 = 'E       '           / format for column 22                           TTYPE23 = 's2n_uJAVA_auto'     / label for column 23                            TFORM23 = 'E       '           / format for column 23                           TTYPE24 = 'uJAVA_petro'        / label for column 24                            TFORM24 = 'E       '           / format for column 24                           TTYPE25 = 'euJAVA_petro'       / label for column 25                            TFORM25 = 'E       '           / format for column 25                           TTYPE26 = 's2n_uJAVA_petro'    / label for column 26                            TFORM26 = 'E       '           / format for column 26                           TTYPE27 = 'uJAVA_aper'         / label for column 27                            TFORM27 = 'E       '           / format for column 27                           TTYPE28 = 'euJAVA_aper'        / label for column 28                            TFORM28 = 'E       '           / format for column 28                           TTYPE29 = 's2n_uJAVA_aper'     / label for column 29                            TFORM29 = 'E       '           / format for column 29                           TTYPE30 = 'F378_auto'          / label for column 30                            TFORM30 = 'E       '           / format for column 30                           TTYPE31 = 'eF378_auto'         / label for column 31                            TFORM31 = 'E       '           / format for column 31                           TTYPE32 = 's2n_F378_auto'      / label for column 32                            TFORM32 = 'E       '           / format for column 32                           TTYPE33 = 'F378_petro'         / label for column 33                            TFORM33 = 'E       '           / format for column 33                           TTYPE34 = 'eF378_petro'        / label for column 34                            TFORM34 = 'E       '           / format for column 34                           TTYPE35 = 's2n_F378_petro'     / label for column 35                            TFORM35 = 'E       '           / format for column 35                           TTYPE36 = 'F378_aper'          / label for column 36                            TFORM36 = 'E       '           / format for column 36                           TTYPE37 = 'eF378_aper'         / label for column 37                            TFORM37 = 'E       '           / format for column 37                           TTYPE38 = 's2n_F378_aper'      / label for column 38                            TFORM38 = 'E       '           / format for column 38                           TTYPE39 = 'F395_auto'          / label for column 39                            TFORM39 = 'E       '           / format for column 39                           TTYPE40 = 'eF395_auto'         / label for column 40                            TFORM40 = 'E       '           / format for column 40                           TTYPE41 = 's2n_F395_auto'      / label for column 41                            TFORM41 = 'E       '           / format for column 41                           TTYPE42 = 'F395_petro'         / label for column 42                            TFORM42 = 'E       '           / format for column 42                           TTYPE43 = 'eF395_petro'        / label for column 43                            TFORM43 = 'E       '           / format for column 43                           TTYPE44 = 's2n_F395_petro'     / label for column 44                            TFORM44 = 'E       '           / format for column 44                           TTYPE45 = 'F395_aper'          / label for column 45                            TFORM45 = 'E       '           / format for column 45                           TTYPE46 = 'eF395_aper'         / label for column 46                            TFORM46 = 'E       '           / format for column 46                           TTYPE47 = 's2n_F395_aper'      / label for column 47                            TFORM47 = 'E       '           / format for column 47                           TTYPE48 = 'F410_auto'          / label for column 48                            TFORM48 = 'E       '           / format for column 48                           TTYPE49 = 'eF410_auto'         / label for column 49                            TFORM49 = 'E       '           / format for column 49                           TTYPE50 = 's2n_F410_auto'      / label for column 50                            TFORM50 = 'E       '           / format for column 50                           TTYPE51 = 'F410_petro'         / label for column 51                            TFORM51 = 'E       '           / format for column 51                           TTYPE52 = 'eF410_petro'        / label for column 52                            TFORM52 = 'E       '           / format for column 52                           TTYPE53 = 's2n_F410_petro'     / label for column 53                            TFORM53 = 'E       '           / format for column 53                           TTYPE54 = 'F410_aper'          / label for column 54                            TFORM54 = 'E       '           / format for column 54                           TTYPE55 = 'eF410_aper'         / label for column 55                            TFORM55 = 'E       '           / format for column 55                           TTYPE56 = 's2n_F410_aper'      / label for column 56                            TFORM56 = 'E       '           / format for column 56                           TTYPE57 = 'F430_auto'          / label for column 57                            TFORM57 = 'E       '           / format for column 57                           TTYPE58 = 'eF430_auto'         / label for column 58                            TFORM58 = 'E       '           / format for column 58                           TTYPE59 = 's2n_F430_auto'      / label for column 59                            TFORM59 = 'E       '           / format for column 59                           TTYPE60 = 'F430_petro'         / label for column 60                            TFORM60 = 'E       '           / format for column 60                           TTYPE61 = 'eF430_petro'        / label for column 61                            TFORM61 = 'E       '           / format for column 61                           TTYPE62 = 's2n_F430_petro'     / label for column 62                            TFORM62 = 'E       '           / format for column 62                           TTYPE63 = 'F430_aper'          / label for column 63                            TFORM63 = 'E       '           / format for column 63                           TTYPE64 = 'eF430_aper'         / label for column 64                            TFORM64 = 'E       '           / format for column 64                           TTYPE65 = 's2n_F430_aper'      / label for column 65                            TFORM65 = 'E       '           / format for column 65                           TTYPE66 = 'g_auto  '           / label for column 66                            TFORM66 = 'E       '           / format for column 66                           TTYPE67 = 'eg_auto '           / label for column 67                            TFORM67 = 'E       '           / format for column 67                           TTYPE68 = 's2n_g_auto'         / label for column 68                            TFORM68 = 'E       '           / format for column 68                           TTYPE69 = 'g_petro '           / label for column 69                            TFORM69 = 'E       '           / format for column 69                           TTYPE70 = 'eg_petro'           / label for column 70                            TFORM70 = 'E       '           / format for column 70                           TTYPE71 = 's2n_g_petro'        / label for column 71                            TFORM71 = 'E       '           / format for column 71                           TTYPE72 = 'g_aper  '           / label for column 72                            TFORM72 = 'E       '           / format for column 72                           TTYPE73 = 'eg_aper '           / label for column 73                            TFORM73 = 'E       '           / format for column 73                           TTYPE74 = 's2n_g_aper'         / label for column 74                            TFORM74 = 'E       '           / format for column 74                           TTYPE75 = 'F515_auto'          / label for column 75                            TFORM75 = 'E       '           / format for column 75                           TTYPE76 = 'eF515_auto'         / label for column 76                            TFORM76 = 'E       '           / format for column 76                           TTYPE77 = 's2n_F515_auto'      / label for column 77                            TFORM77 = 'E       '           / format for column 77                           TTYPE78 = 'F515_petro'         / label for column 78                            TFORM78 = 'E       '           / format for column 78                           TTYPE79 = 'eF515_petro'        / label for column 79                            TFORM79 = 'E       '           / format for column 79                           TTYPE80 = 's2n_F515_petro'     / label for column 80                            TFORM80 = 'E       '           / format for column 80                           TTYPE81 = 'F515_aper'          / label for column 81                            TFORM81 = 'E       '           / format for column 81                           TTYPE82 = 'eF515_aper'         / label for column 82                            TFORM82 = 'E       '           / format for column 82                           TTYPE83 = 's2n_F515_aper'      / label for column 83                            TFORM83 = 'E       '           / format for column 83                           TTYPE84 = 'r_auto  '           / label for column 84                            TFORM84 = 'E       '           / format for column 84                           TTYPE85 = 'er_auto '           / label for column 85                            TFORM85 = 'E       '           / format for column 85                           TTYPE86 = 's2n_r_auto'         / label for column 86                            TFORM86 = 'E       '           / format for column 86                           TTYPE87 = 'r_petro '           / label for column 87                            TFORM87 = 'E       '           / format for column 87                           TTYPE88 = 'er_petro'           / label for column 88                            TFORM88 = 'E       '           / format for column 88                           TTYPE89 = 's2n_r_petro'        / label for column 89                            TFORM89 = 'E       '           / format for column 89                           TTYPE90 = 'r_aper  '           / label for column 90                            TFORM90 = 'E       '           / format for column 90                           TTYPE91 = 'er_aper '           / label for column 91                            TFORM91 = 'E       '           / format for column 91                           TTYPE92 = 's2n_r_aper'         / label for column 92                            TFORM92 = 'E       '           / format for column 92                           TTYPE93 = 'F660_auto'          / label for column 93                            TFORM93 = 'E       '           / format for column 93                           TTYPE94 = 'eF660_auto'         / label for column 94                            TFORM94 = 'E       '           / format for column 94                           TTYPE95 = 's2n_F660_auto'      / label for column 95                            TFORM95 = 'E       '           / format for column 95                           TTYPE96 = 'F660_petro'         / label for column 96                            TFORM96 = 'E       '           / format for column 96                           TTYPE97 = 'eF660_petro'        / label for column 97                            TFORM97 = 'E       '           / format for column 97                           TTYPE98 = 's2n_F660_petro'     / label for column 98                            TFORM98 = 'E       '           / format for column 98                           TTYPE99 = 'F660_aper'          / label for column 99                            TFORM99 = 'E       '           / format for column 99                           TTYPE100= 'eF660_aper'         / label for column 100                           TFORM100= 'E       '           / format for column 100                          TTYPE101= 's2n_F660_aper'      / label for column 101                           TFORM101= 'E       '           / format for column 101                          TTYPE102= 'i_auto  '           / label for column 102                           TFORM102= 'E       '           / format for column 102                          TTYPE103= 'ei_auto '           / label for column 103                           TFORM103= 'E       '           / format for column 103                          TTYPE104= 's2n_i_auto'         / label for column 104                           TFORM104= 'E       '           / format for column 104                          TTYPE105= 'i_petro '           / label for column 105                           TFORM105= 'E       '           / format for column 105                          TTYPE106= 'ei_petro'           / label for column 106                           TFORM106= 'E       '           / format for column 106                          TTYPE107= 's2n_i_petro'        / label for column 107                           TFORM107= 'E       '           / format for column 107                          TTYPE108= 'i_aper  '           / label for column 108                           TFORM108= 'E       '           / format for column 108                          TTYPE109= 'ei_aper '           / label for column 109                           TFORM109= 'E       '           / format for column 109                          TTYPE110= 's2n_i_aper'         / label for column 110                           TFORM110= 'E       '           / format for column 110                          TTYPE111= 'F861_auto'          / label for column 111                           TFORM111= 'E       '           / format for column 111                          TTYPE112= 'eF861_auto'         / label for column 112                           TFORM112= 'E       '           / format for column 112                          TTYPE113= 's2n_F861_auto'      / label for column 113                           TFORM113= 'E       '           / format for column 113                          TTYPE114= 'F861_petro'         / label for column 114                           TFORM114= 'E       '           / format for column 114                          TTYPE115= 'eF861_petro'        / label for column 115                           TFORM115= 'E       '           / format for column 115                          TTYPE116= 's2n_F861_petro'     / label for column 116                           TFORM116= 'E       '           / format for column 116                          TTYPE117= 'F861_aper'          / label for column 117                           TFORM117= 'E       '           / format for column 117                          TTYPE118= 'eF861_aper'         / label for column 118                           TFORM118= 'E       '           / format for column 118                          TTYPE119= 's2n_F861_aper'      / label for column 119                           TFORM119= 'E       '           / format for column 119                          TTYPE120= 'z_auto  '           / label for column 120                           TFORM120= 'E       '           / format for column 120                          TTYPE121= 'ez_auto '           / label for column 121                           TFORM121= 'E       '           / format for column 121                          TTYPE122= 's2n_z_auto'         / label for column 122                           TFORM122= 'E       '           / format for column 122                          TTYPE123= 'z_petro '           / label for column 123                           TFORM123= 'E       '           / format for column 123                          TTYPE124= 'ez_petro'           / label for column 124                           TFORM124= 'E       '           / format for column 124                          TTYPE125= 's2n_z_petro'        / label for column 125                           TFORM125= 'E       '           / format for column 125                          TTYPE126= 'z_aper  '           / label for column 126                           TFORM126= 'E       '           / format for column 126                          TTYPE127= 'ez_aper '           / label for column 127                           TFORM127= 'E       '           / format for column 127                          TTYPE128= 's2n_z_aper'         / label for column 128                           TFORM128= 'E       '           / format for column 128                          TTYPE129= 'recno   '           / label for column 129                           TFORM129= 'J       '           / format for column 129                          TUCD129 = 'meta.record'                                                         TTYPE130= 'Sp      '           / label for column 130                           TFORM130= 'A       '           / format for column 130                          TCOMM130= 'indicates SDSS spectrum in gaiasdss'                                 TUCD130 = 'meta.ref.url'                                                        TTYPE131= 'WD      '           / label for column 131                           TFORM131= '23A     '           / format for column 131                          TCOMM131= 'WD name (WDJHHMMSS.ss+DDMMSS.ss, J2000) (white_dwarf_name)'          TUCD131 = 'meta.id;meta.main'                                                   TTYPE132= 'DR2Name '           / label for column 132                           TFORM132= '28A     '           / format for column 132                          TCOMM132= 'Unique Gaia source designation (designation)'                        TUCD132 = 'meta.id '                                                            TTYPE133= 'Source  '           / label for column 133                           TFORM133= 'K       '           / format for column 133                          TCOMM133= 'Unique Gaia source identifier (source_id)'                           TUCD133 = 'meta.id '                                                            TTYPE134= 'RA_ICRS '           / label for column 134                           TFORM134= 'D       '           / format for column 134                          TUNIT134= 'deg     '           / units for column 134                           TCOMM134= 'Gaia DR2 barycentric right ascension (ICRS) at epoch J2015.5 (ra)'   TUCD134 = 'pos.eq.ra;meta.main'                                                 TTYPE135= 'e_RA_ICRS'          / label for column 135                           TFORM135= 'D       '           / format for column 135                          TUNIT135= 'mas     '           / units for column 135                           TCOMM135= 'Standard error of right ascension (ra_error)'                        TUCD135 = 'stat.error;pos.eq.ra'                                                TTYPE136= 'DE_ICRS '           / label for column 136                           TFORM136= 'D       '           / format for column 136                          TUNIT136= 'deg     '           / units for column 136                           TCOMM136= 'Gaia DR2 barycentric declination (ICRS) at epoch J2015.5 (dec)'      TUCD136 = 'pos.eq.dec;meta.main'                                                TTYPE137= 'e_DE_ICRS'          / label for column 137                           TFORM137= 'D       '           / format for column 137                          TUNIT137= 'mas     '           / units for column 137                           TCOMM137= 'Standard error of declination (dec_error)'                           TUCD137 = 'stat.error;pos.eq.dec'                                               TTYPE138= 'Plx     '           / label for column 138                           TFORM138= 'D       '           / format for column 138                          TUNIT138= 'mas     '           / units for column 138                           TCOMM138= 'Absolute stellar parallax of the source at J2015.5 (parallax)'       TUCD138 = 'pos.parallax'                                                        TTYPE139= 'e_Plx   '           / label for column 139                           TFORM139= 'D       '           / format for column 139                          TUNIT139= 'mas     '           / units for column 139                           TCOMM139= 'Standard error of parallax (parallax_error)'                         TUCD139 = 'stat.error;pos.parallax'                                             TTYPE140= 'pmRA    '           / label for column 140                           TFORM140= 'D       '           / format for column 140                          TUNIT140= 'mas/yr  '           / units for column 140                           TCOMM140= 'Proper motion in right ascension (pmRAxcosDE) (pmra)'                TUCD140 = 'pos.pm;pos.eq.ra'                                                    TTYPE141= 'e_pmRA  '           / label for column 141                           TFORM141= 'D       '           / format for column 141                          TUNIT141= 'mas/yr  '           / units for column 141                           TCOMM141= 'Standard error of proper motion in right ascension (pmra_error)'     TUCD141 = 'stat.error;pos.pm;pos.eq.ra'                                         TTYPE142= 'pmDE    '           / label for column 142                           TFORM142= 'D       '           / format for column 142                          TUNIT142= 'mas/yr  '           / units for column 142                           TCOMM142= 'Proper motion in declination (pmdec)'                                TUCD142 = 'pos.pm;pos.eq.dec'                                                   TTYPE143= 'e_pmDE  '           / label for column 143                           TFORM143= 'D       '           / format for column 143                          TUNIT143= 'mas/yr  '           / units for column 143                           TCOMM143= 'Standard error of proper motion in declination (pmdec_error)'        TUCD143 = 'stat.error;pos.pm;pos.eq.dec'                                        TTYPE144= 'epsi    '           / label for column 144                           TFORM144= 'D       '           / format for column 144                          TUNIT144= 'mas     '           / units for column 144                           TUCD144 = 'stat.fit.residual'                                                   TTYPE145= 'amax    '           / label for column 145                           TFORM145= 'D       '           / format for column 145                          TUNIT145= 'mas     '           / units for column 145                           TUCD145 = 'pos     '                                                            TTYPE146= 'FG      '           / label for column 146                           TFORM146= 'D       '           / format for column 146                          TUNIT146= 'e-/s    '           / units for column 146                           TCOMM146= 'Gaia G-band mean flux (phot_g_mean_flux)'                            TUCD146 = 'phot.flux;stat.mean;em.opt'                                          TTYPE147= 'e_FG    '           / label for column 147                           TFORM147= 'D       '           / format for column 147                          TUNIT147= 'e-/s    '           / units for column 147                           TCOMM147= 'Error on G-band mean flux (phot_g_mean_flux_error)'                  TTYPE148= 'Gmag_2  '           / label for column 148                           TFORM148= 'D       '           / format for column 148                          TUNIT148= 'mag     '           / units for column 148                           TCOMM148= 'Gaia G-band mean magnitude (Vega scale) (phot_g_mean_mag)'           TUCD148 = 'phot.mag;stat.mean;em.opt'                                           TTYPE149= 'FBP     '           / label for column 149                           TFORM149= 'D       '           / format for column 149                          TUNIT149= 'e-/s    '           / units for column 149                           TCOMM149= 'Integrated GBP mean flux (phot_bp_mean_flux)'                        TTYPE150= 'e_FBP   '           / label for column 150                           TFORM150= 'D       '           / format for column 150                          TUNIT150= 'e-/s    '           / units for column 150                           TCOMM150= 'Error on GBP-band mean flux (phot_bp_mean_flux_error)'               TTYPE151= 'BPmag   '           / label for column 151                           TFORM151= 'D       '           / format for column 151                          TUNIT151= 'mag     '           / units for column 151                           TCOMM151= 'Gaia GBP-band mean magnitude (Vega scale) (phot_bp_mean_mag)'        TTYPE152= 'FRP     '           / label for column 152                           TFORM152= 'D       '           / format for column 152                          TUNIT152= 'e-/s    '           / units for column 152                           TCOMM152= 'Integrated GRP mean flux (phot_rp_mean_flux)'                        TUCD152 = 'phot.flux.density;em.opt.R'                                          TTYPE153= 'e_FRP   '           / label for column 153                           TFORM153= 'D       '           / format for column 153                          TUNIT153= 'e-/s    '           / units for column 153                           TCOMM153= 'Error on GRP-band mean flux (phot_rp_mean_flux_error)'               TTYPE154= 'RPmag   '           / label for column 154                           TFORM154= 'D       '           / format for column 154                          TUNIT154= 'mag     '           / units for column 154                           TCOMM154= 'Gaia GRP-band mean magnitude (Vega scale) (phot_rp_mean_mag)'        TTYPE155= 'E(BR/RP)'           / label for column 155                           TFORM155= 'D       '           / format for column 155                          TUCD155 = 'arith.factor'                                                        TTYPE156= 'GLON    '           / label for column 156                           TFORM156= 'D       '           / format for column 156                          TUNIT156= 'deg     '           / units for column 156                           TCOMM156= 'Galactic longitude (l)'                                              TUCD156 = 'pos.galactic.lon'                                                    TTYPE157= 'GLAT    '           / label for column 157                           TFORM157= 'D       '           / format for column 157                          TUNIT157= 'deg     '           / units for column 157                           TCOMM157= 'Galactic latitude (b)'                                               TUCD157 = 'pos.galactic.lat'                                                    TTYPE158= 'Density '           / label for column 158                           TFORM158= 'D       '           / format for column 158                          TUCD158 = 'meta.number'                                                         TTYPE159= 'AG      '           / label for column 159                           TFORM159= 'D       '           / format for column 159                          TUNIT159= 'mag     '           / units for column 159                           TUCD159 = 'phys.absorption'                                                     TTYPE160= 'SDSS    '           / label for column 160                           TFORM160= '19A     '           / format for column 160                          TUCD160 = 'meta.id '                                                            TTYPE161= 'umag    '           / label for column 161                           TFORM161= 'D       '           / format for column 161                          TUNIT161= 'mag     '           / units for column 161                           TCOMM161= '? SDSS u band magnitude (umag)'                                      TUCD161 = 'phot.mag;em.opt.U'                                                   TTYPE162= 'e_umag  '           / label for column 162                           TFORM162= 'D       '           / format for column 162                          TUNIT162= 'mag     '           / units for column 162                           TCOMM162= '? SDSS u band magnitude uncertainty (e_umag)'                        TUCD162 = 'stat.error;phot.mag;em.opt.U'                                        TTYPE163= 'gmag_2a '           / label for column 163                           TFORM163= 'D       '           / format for column 163                          TUNIT163= 'mag     '           / units for column 163                           TCOMM163= '? SDSS g band magnitude (gmag)'                                      TUCD163 = 'phot.mag;em.opt.B'                                                   TTYPE164= 'e_gmag  '           / label for column 164                           TFORM164= 'D       '           / format for column 164                          TUNIT164= 'mag     '           / units for column 164                           TCOMM164= '? SDSS g band magnitude uncertainty (e_gmag)'                        TUCD164 = 'stat.error;phot.mag;em.opt.B'                                        TTYPE165= 'rmag    '           / label for column 165                           TFORM165= 'D       '           / format for column 165                          TUNIT165= 'mag     '           / units for column 165                           TCOMM165= '? SDSS r band magnitude (rmag)'                                      TUCD165 = 'phot.mag;em.opt.R'                                                   TTYPE166= 'e_rmag  '           / label for column 166                           TFORM166= 'D       '           / format for column 166                          TUNIT166= 'mag     '           / units for column 166                           TCOMM166= '? SDSS r band magnitude uncertainty (e_rmag)'                        TUCD166 = 'stat.error;phot.mag;em.opt.R'                                        TTYPE167= 'imag    '           / label for column 167                           TFORM167= 'D       '           / format for column 167                          TUNIT167= 'mag     '           / units for column 167                           TCOMM167= '? SDSS i band magnitude (imag)'                                      TUCD167 = 'phot.mag;em.opt.I'                                                   TTYPE168= 'e_imag  '           / label for column 168                           TFORM168= 'D       '           / format for column 168                          TUNIT168= 'mag     '           / units for column 168                           TCOMM168= '? SDSS i band magnitude uncertainty (e_imag)'                        TUCD168 = 'stat.error;phot.mag;em.opt.I'                                        TTYPE169= 'zmag    '           / label for column 169                           TFORM169= 'D       '           / format for column 169                          TUNIT169= 'mag     '           / units for column 169                           TCOMM169= '? SDSS z band magnitude (zmag)'                                      TUCD169 = 'phot.mag;em.opt.I'                                                   TTYPE170= 'e_zmag  '           / label for column 170                           TFORM170= 'D       '           / format for column 170                          TUNIT170= 'mag     '           / units for column 170                           TCOMM170= '? SDSS z band magnitude uncertainty (e_zmag)'                        TUCD170 = 'stat.error;phot.mag;em.opt.I'                                        TTYPE171= 'Pwd     '           / label for column 171                           TFORM171= 'D       '           / format for column 171                          TCOMM171= '[0/1]? The probability of being a white dwarf (Pwd)'                 TUCD171 = 'stat.fit.goodness'                                                   TTYPE172= 'f_Pwd   '           / label for column 172                           TFORM172= 'I       '           / format for column 172                          TCOMM172= '[0/1] If 1 it indicates the PWD value could be unreliable (Pwd_flag)'TUCD172 = 'meta.code'                                                           TTYPE173= 'TeffH   '           / label for column 173                           TFORM173= 'D       '           / format for column 173                          TUNIT173= 'K       '           / units for column 173                           TUCD173 = 'phys.temperature.effective'                                          TTYPE174= 'e_TeffH '           / label for column 174                           TFORM174= 'D       '           / format for column 174                          TUNIT174= 'K       '           / units for column 174                           TCOMM174= '? Uncertainty on Teff_H (eTeff_H)'                                   TUCD174 = 'stat.error'                                                          TTYPE175= 'loggH   '           / label for column 175                           TFORM175= 'D       '           / format for column 175                          TUCD175 = 'phys.gravity'                                                        TTYPE176= 'e_loggH '           / label for column 176                           TFORM176= 'D       '           / format for column 176                          TCOMM176= '? Uncertainty on log_g_H (elog_g_H)'                                 TUCD176 = 'stat.error'                                                          TTYPE177= 'MassH   '           / label for column 177                           TFORM177= 'D       '           / format for column 177                          TUNIT177= 'Msun    '           / units for column 177                           TUCD177 = 'phys.mass'                                                           TTYPE178= 'e_MassH '           / label for column 178                           TFORM178= 'D       '           / format for column 178                          TUNIT178= 'Msun    '           / units for column 178                           TCOMM178= '? Uncertainty on the mass (emass_H)'                                 TUCD178 = 'stat.error'                                                          TTYPE179= 'chi2H   '           / label for column 179                           TFORM179= 'D       '           / format for column 179                          TCOMM179= '? chi2 value of the fit (pure-H) (chi2_H)'                           TUCD179 = 'stat.fit.chi2;stat.fit.param;meta.modelled'                          TTYPE180= 'TeffHe  '           / label for column 180                           TFORM180= 'D       '           / format for column 180                          TUNIT180= 'K       '           / units for column 180                           TUCD180 = 'phys.temperature.effective'                                          TTYPE181= 'e_TeffHe'           / label for column 181                           TFORM181= 'D       '           / format for column 181                          TUNIT181= 'K       '           / units for column 181                           TCOMM181= '? Uncertainty on Teff_He (eTeff_He)'                                 TUCD181 = 'stat.error'                                                          TTYPE182= 'loggHe  '           / label for column 182                           TFORM182= 'D       '           / format for column 182                          TUCD182 = 'phys.gravity'                                                        TTYPE183= 'e_loggHe'           / label for column 183                           TFORM183= 'D       '           / format for column 183                          TCOMM183= '? Uncertainty on log_g_He (elog_g_He)'                               TUCD183 = 'stat.error'                                                          TTYPE184= 'MassHe  '           / label for column 184                           TFORM184= 'D       '           / format for column 184                          TUNIT184= 'Msun    '           / units for column 184                           TUCD184 = 'phys.mass'                                                           TTYPE185= 'e_MassHe'           / label for column 185                           TFORM185= 'D       '           / format for column 185                          TUNIT185= 'Msun    '           / units for column 185                           TCOMM185= '? Uncertainty on the mass (emass_He)'                                TUCD185 = 'stat.error'                                                          TTYPE186= 'chisqHe '           / label for column 186                           TFORM186= 'D       '           / format for column 186                          TCOMM186= '? chi2 value of the fit (pure-H) (chisq_He)'                         TUCD186 = 'stat.fit.chi2;stat.fit.param;meta.modelled'                          TTYPE187= '_RA_icrs'           / label for column 187                           TFORM187= 'D       '           / format for column 187                          TUNIT187= 'deg     '           / units for column 187                           TUCD187 = 'pos.eq.ra'                                                           TTYPE188= '_DE_icrs'           / label for column 188                           TFORM188= 'D       '           / format for column 188                          TUNIT188= 'deg     '           / units for column 188                           TCOMM188= 'Declination (ICRS) at Epoch=J2000, proper motions taken into account'TUCD188 = 'pos.eq.dec'                                                          TTYPE189= 'Separation'         / label for column 189                           TFORM189= 'D       '           / format for column 189                          TUNIT189= 'arcsec  '           / units for column 189                           TCOMM189= 'Distance between matched objects along a great circle'               TUCD189 = 'pos.angDistance'                                                     DATE-HDU= '2020-07-02T06:15:44' / Date of HDU creation (UTC)                    STILVERS= '3.1-2   '           / Version of STIL software                       STILCLAS= 'uk.ac.starlink.votable.FitsPlusTableWriter' / Author class in STIL soEND                                                                                                                                                                                                                                             SPLUS-n01s37SPLUS.SPLUS-n01s37.0000016775.griz@hÎLD|0”?¶nC™yªÆ@æOÂ`Aâ@∂õ=Û∂E¢   ∑CÀXR  @(QÏ?u¬èAL(ˆ@{@∏¬™î{?ıOﬂ;dZ?Ö∏   Av·H<£◊
+CxôöAoÆ<£◊
+Cís3AuGÆ<£◊
+CÇ33Axz·<£◊
+C+ÊfAq¬è<£◊
+CE33Av·H<£◊
+C3LÕAyÎÖ<£◊
+BÈÃÕAr·H<£◊
+CffAxQÏ<£◊
+BÛÃÕA{33<£◊
+BÔ  Ar=q<£◊
+C  Axı√<£◊
+B˛33A{◊
+<£◊
+BˇôöAup§<£◊
+C  Az=q<£◊
+CÊfAÆ<£◊
+CÜ&fAzff<£◊
+CèLÕA~ff<£◊
+Cä&fAÄ(ˆ<£◊
+C
+33A{\)<£◊
+CffA33<£◊
+CÃÕAÉGÆ<£◊
+CuffAÅGÆ<£◊
+Cd  AÇÃÕ<£◊
+Cx≥3AÖ∏<£◊
+C0ÊfAÇ  <£◊
+C-ôöAÑQÏ<£◊
+C733AÜı√<£◊
+C,ÃÕAÑQÏ<£◊
+CÄ AÜQÏ<£◊
+C.öAà·H<£◊
+B†ôöAÜ(ˆ<£◊
+BX  Aà(ˆ<£◊
+Bü33AâÆ<£◊
+B¿  AÜÃÕ<£◊
+Br  Aà·H<£◊
+BΩ    n\*WDJ131724.75+000237.38 Gaia DR2 36875247498630263043,∏9 ˛Ä@hÎK˚Üª?ª/ß}#+?¶m0‘L≤?ØéX_·U‚@é!ñRΩ<?¿>BZÓc ¿5&Èx‘˝Ù?∆ßÔù≤-@3˛˘€"–Â?ª•„S˜ŒŸ?’`Aâ7K«?≈®…„8t@ª˝e≈-¢@A°î›X◊K@0ﬁ¸*à@ªÇß0—{Õ@PI„g@/vŒ›HE@°–“ùd_%@,ÜÄyV~õ@0]Ï=´\:?Ù–Â`Aâ7@sœ|æN@OR#û@±pú‡u˜?Æ2ÓxsJ131724.75+000237.3@.|Ìëhs?pbM“Ò©¸@/{dZ¨?hìtºj~˙@0Nz·GÆ?pbM“Ò©¸@0≤-V?tz·GÆ{@1 ƒõ•„?àìtºj~˙?Ó∑X‚e  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @hÎL∫Ñâ\?¶aËèÍ??¿x$Fz“≠SPLUS-n03s20SPLUS.SPLUS-n03s20.0000016988.griz@e˝êÓ¢
+¿ò®mqÛb@√m)á+@µÓÔù≤-   AˇÎÖ  @à  ?∆ffAà£◊?‚è\?–£◊¡§QÏ?ıôôôôôö?ú(ˆ   Aü33=LÃÕA≠ôöAö  =LÃÕA¶ffAúz·=LÃÕA∂ffAüÖ=è\)Ah  Aõôö=∏QÏA>ffAúè\=è\)AyôöA°ôö>\)@  Aö  >∏AffAúı√=ı¬èA33A†ÃÕ>∏A	ôöAö  =ı¬èAffAù\)=ı¬èAffA¢è\>#◊
+@”33AöQÏ>\)@˘ôöAû(ˆ>\)@¸ÃÕA°
+==#◊
+A ffAú  =LÃÕA∑33Aû(ˆ=#◊
+A‘  A†£◊=ÃÃÕA+33Aõp§=ı¬èAffAùp§=∏QÏA6ffA£∏=LÃÕA§ÃÕAùÆ=u¬èAì33A†  =LÃÕA¨ÃÕA§ı√=è\)As33A†ff=∏QÏAC33A¢=q=è\)AtÃÕA•¬è=£◊
+AQôöA°◊
+=ı¬èAÃÕA£
+==£◊
+ANffA®·H>ä=q@Ä  A°Ö>ä=q@É33A•
+=>u¬è@åÃÕA®z·>Bè\@∂ffAü∏>ôö@ÊffA£ÎÖ>#◊
+@Ÿôö G WDJ114341.71-024158.59 Gaia DR2 37927131675708147204¢là G @e˝è∫bç—?·%‚`Ÿ]¿ò∫`ô1Ë?ÿ˚‘]ñŸ?Ù¶L/É{J?ÂïÅ$›/¿nóçOﬂ;?Û∂E° ¿É@ @Énóç?ÂÅ$›/        ?Ò[ö‡¡vW@kì{πÄQ.?Ù1ÆT8◊º@3‘MárO©@hu¬}ÊP®@)áµı€˙@3ü]ö
+_@Q§Íóßà@ã©á‚U@4#Ëh3∆ ?ÛOﬂ;dZ@p˘R;õÿ%@Kˇ°]∂©@≠â∂ìu?¶çn5eJ114341.71-024158.5@3rÒ©˚Ám?†bM“Ò©¸@3ÉnóçP?å¨1&Èy@3˜K∆ßÔû?õ•„S˜ŒŸ@4Tºj~˘€?®bM“Ò™@4ò‘˝Û∂F?ŒVìtº?Ôöm⁄ŒÓ  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @e˝è—wﬁ·¿òÃ∏y¥o?∆í@Âd¡ÏSPLUS-n03s21SPLUS.SPLUS-n03s21.0000006116.griz@fRﬁ —∑¿	ú|ÿò≤Í@òúÚ∞ ƒú@¢3˝p£◊
+   °C∑W
+ ?˝p§?8QÏAHÃÕ@
+=@è\¬0(ˆ?Úz·GÆ?Ä     AxÃÕ<£◊
+CcÃÕAo33<£◊
+Cê@ AuGÆ<£◊
+CzLÕA{
+=<£◊
+C≥3AqÎÖ<£◊
+C@Ä Aw◊
+<£◊
+C+  A{
+=<£◊
+BÈôöAtQÏ<£◊
+CôöAx£◊<£◊
+B˜ôöA{◊
+<£◊
+B˚  Aup§<£◊
+C	ôöAy¬è<£◊
+CffA}p§<£◊
+B˘33Aw
+=<£◊
+CÄ A{\)<£◊
+C  AÄ£◊<£◊
+Cz≥3A{\)<£◊
+CàŸöA\)<£◊
+CÉôöAÅ\)<£◊
+BÓÃÕA{
+=<£◊
+C  AÄ{<£◊
+B˝ffAÑ{<£◊
+Cd≥3AÅ¬è<£◊
+C\öAÉGÆ<£◊
+Cj≥3AÖGÆ<£◊
+C5  AÇı√<£◊
+C,  AÑz·<£◊
+C:öAáôö<£◊
+C,33AÖp§<£◊
+CôöAÜ·H<£◊
+C+≥3Aâ◊
+<£◊
+Bú33Aáôö<£◊
+BE33Aàı√<£◊
+Bñ  Aäff<£◊
+Bœ  Aà=q<£◊
+BvffAâôö<£◊
+B√ff 
+ñ WDJ115415.06-031205.13 Gaia DR2 36017815345946240001¸9 Í @fRmòkì?µX0Ú3r?¿	úÜD’ÿq?•ã¸™nN?Úªò«‚ÇA?∑Æz·GÆ@!I∫^5?«Ôù≤-Vøﬂ|Ìëhr∞?∂á+I∫?ÿbM“Ò™?≈ºïù
+ΩH@∫´" @)UÀ2˜@0PaAcx@πªNŒ∑V@KÖ“¸i@/õˆ„˜ãΩ@†q3⁄ç]>@"€qUuó@0t9-å*?Ù^5?|Ìë@qD2≥ﬁ	"@LWB∑c@∞òÔ\(ı√?™¡¡¬öJ115415.06-031205.1@.p£◊
+=q?pbM“Ò©¸@/q©˚Álã?hìtºj~˙@0X‘˝Û∂F?pbM“Ò©¸@0∫¨1'?tz·GÆ{@133333?àìtºj~˙?Îe”ôo®/  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @fR ∞# ¿	úÖ(õÚ? ë9$èSPLUS-n03s21SPLUS.SPLUS-n03s21.0000016440.griz@fB~œÈ∑ø¿ë¨ö˛®@≤á˙·GÆ@≤‘CS˜ŒŸ   0Bˆ®ˆ  @(ˆ?LÃÕAh£◊?Êff?·GÆAc◊
+?Ú=p£◊
+=?ó
+=   Aè
+=<£◊
+Bì  Aâ∏<£◊
+B∑33AãÎÖ<£◊
+B´ôöAèôö<£◊
+BNffAä(ˆ<£◊
+BnÃÕAå∏R<£◊
+BkôöAèGÆ<ı¬èBôöAã\)<ı¬èB  Aç33<ı¬èB$  Aè\)<ı¬èB(  AãÖ<ı¬èB"ÃÕAçGÆ<£◊
+B2ÃÕAè¬è<ı¬èB*  Aå  <ı¬èB"ffAçÎÖ<£◊
+B1ôöAë\)<£◊
+B±ÃÕAé{<£◊
+B´  AèÆ<£◊
+BπôöAí  <ı¬èB!33Aé(ˆ<ı¬èB33Aê  <ı¬èB(  Aîff<£◊
+BõôöAë◊
+<£◊
+BxffAíı√<£◊
+BöôöAñ  <£◊
+BlffAì∏<£◊
+B<  AîQÏ<£◊
+Bl  AóGÆ<£◊
+BSôöAï
+=<ı¬èBÃÕAïÎÖ<£◊
+BBffAòı√=LÃÕA®  Añ=q=∏QÏAIôöAó◊
+=u¬èAéffAòı√=#◊
+A·ôöAó◊
+=£◊
+A^ffAóÎÖ=LÃÕAº    Z&*WDJ115218.70-024915.86 Gaia DR2 36020441117157644801˝	 	 @fB~Y‹Ì8?∆ÏêT\{\¿ëØ∂ºj)?µ·,]óïé?˙∫«À)_? √…ÓÀ˚@˜ŒŸá+?ÿƒõ•„S¯¿-MOﬂ;dZ?«+I∫^?æ∏QÎÖ∏?’¯•ò´]@ëµ_4'z?ˇ/p2@2n&NHb@êÏÓNæ∞®@5¯ºS´≈?@1√ª∆Î|@wé‘@SÒ@€/)
+±@2R?FfÏû?Ùõ•„S˜œ@q2≈éı@Lj6<%ÿ‘@±›‚e,?§’Ï_,J115218.69-024915.8@1PbM“Ò™?ÇnóçOﬂ;@1ΩÛ∂E°À?tz·GÆ{@2=p£◊
+=?ÄbM“Ò©¸@2ùÛ∂E°À?àìtºj~˙@2Ù9XbN?¨¨1&Èy?ÔïÅ$›/  @‰6™FoP@ çcd‡Ti@e
+9>Ê?Ÿ“Ñú≤RŒ?„Dõ•„S¯?«ÈØ[¢æ@!‚úô(Zí¯      ¯      ¯      ¯      ¯      ¯      ¯      @fB~*xÁ⁄¿ëé§	Ìd? 	YOÓSPLUS-n03s24SPLUS.SPLUS-n03s24.0000010166.griz@fÀ∫4C‘k¿G‚Ç@∑Ä@™/XbM”@™∂ﬁ5?|Ó   XCk  @
+=?E∏AX  @
+·H?˝p§¿§(ˆ?Ò•„S˜ŒŸ?åÃÕ   AÑ∏R<£◊
+Bˆ33AÅp§<£◊
+C	ÃÕAÉÖ<£◊
+CÊfAÖÎÖ<£◊
+B…33AÇ£◊<£◊
+BŸÃÕAÑ∏R<£◊
+B’  AÜ=q<£◊
+BãffAÉ
+=<£◊
+BèffAÖ
+=<£◊
+Bí33AÜ∏R<£◊
+Bë33AÇÃÕ<£◊
+BõffAÖ33<£◊
+BõôöAá33<£◊
+BôÃÕAÑQÏ<£◊
+Bò  AÜ(ˆ<£◊
+BüffAàè\<£◊
+C"  AÜ=q<£◊
+C!ffAá¬è<£◊
+C'33Aâ
+=<£◊
+B¢ffAÜ·H<£◊
+BîffAàQÏ<£◊
+B§33AãÎÖ<£◊
+C≥3Aä{<£◊
+Bˆ33AãGÆ<£◊
+CLÕAç\)<£◊
+B›ffAã∏<£◊
+BªôöAåz·<£◊
+Bﬂ  Aè33<£◊
+BÕ  AçGÆ<£◊
+BãôöAéè\<£◊
+B√33Aë\)<ı¬èB,ÃÕAè¬è=LÃÕA¿  Aê∏R<ı¬èBffAí(ˆ<£◊
+BVÃÕAè¬è<ı¬èA˘ôöAëGÆ<£◊
+BBÃÕ  hX*WDJ120927.94-030206.31 Gaia DR2 35983256321104620801Ô“  ÑÄ@fÀπû∑Ä'?¿FdYLÀ¿G‰ïïLﬂ?∏æπ¸}¡?Ì0æÌ(ç?¡Ç©ì‡ﬂ¿{ÁlãCñ?“~˘€"–Â¿„S˜ŒŸ?«K∆ßÔù≤?–¥9XbN?“%eVœ@•xÇÁ•‹?@À‹Ë∞ú@19ü]˛π@§Ä©ns±@@5ıÕxÉá@0Õ»ß§X@ã⁄•¥Ä@-”óö∏›@1j˜<…?ÙQÎÖ∏R@q¨Eì$c@Mcˇ^Èq@ØÄzC˛\í?¨Ö4UQÖ@J120927.93-030206.2@0NVìu?tz·GÆ{@0¬–Â`Aâ?pbM“Ò©¸@1W
+=p£◊?tz·GÆ{@1µÅ$›/?|¨1&Èy@2 ƒõ•„?òìtºj~˙?ÏÊ1¯†ê.  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @fÀπ”Õ±˜¿G€ﬁq≤?–n†õ?_ÕSPLUS-n03s43SPLUS.SPLUS-n03s43.0000010680.griz@jï‘Ë˚¿àèÜ`‘@î«®ı¬è\@Ø|49Xb   1C0§  @è\?=p§A^=q?¯QÏ?ﬁ∏R¬VQÏ?ÚnóçOﬂ;?ú(ˆ   Aâ¬è<£◊
+B«ÃÕAÖôö<£◊
+B∆ffAá¬è<£◊
+B’33Aäff<£◊
+Bå33Aá
+=<£◊
+BÅ33AàÃÕ<£◊
+BëôöAäè\<£◊
+BD  Aáôö<ı¬èB&ffAâ
+=<£◊
+BFÃÕAäı√<£◊
+BI33Aà  <ı¬èB ffAâÖ<£◊
+BG33Aãp§<£◊
+BL  AàÃÕ<ı¬èBôöAä{<£◊
+BGôöAç33<£◊
+B–ffAä=q<£◊
+B§ôöAã◊
+<£◊
+BÃôöAçÖ<£◊
+BT  Aã
+=<ı¬èB33Aåff<£◊
+BJÃÕAê{<£◊
+BºffAç¬è<£◊
+BÉÃÕAéı√<£◊
+B≤  Aëp§<£◊
+BêôöAè33<£◊
+BFffAêQÏ<£◊
+BáôöAì33<£◊
+BÇ33Aë∏<ı¬èB  Aí=q<£◊
+Bh  Aïp§=#◊
+A“ffAíz·=è\)AÄÃÕAî£◊=LÃÕA∞ÃÕAïÖ<ı¬èBffAíı√=u¬èAöffAî=q=#◊
+AÎ33  f*WDJ135356.89-025630.44 Gaia DR2 36574068929952389122¡∏1 ‹ @jïéí’≤?¿f¯Ö÷ºÀ¿àÆYUƒˆ?ºÖ*O\<@Ov_Ÿ?ƒÿD–©¿nóçOﬂ?— ¿Énò@'·GÆz·? =p£◊
+=?≠/üæv…?–k+<n∆1@öwd:ós)@ñwÇX¨Â@1ùΩ¯Ùs@ò¶Í(Û_@2>Í±Ì@1[7 GMú@Å´EÿãÕ@¿6eh˙@1·ä"-Qr?Ù=p£◊
+=@tøŒ+51@L.a_¸◊Á@±úÌëhs?πÓƒ]d$J135356.88-025630.4@0‰õ•„S¯?|¨1&Èy@1KÖ∏QÏ?tz·GÆ{@1’?|Ìëh?xìtºj~˙@2.Vìu?ÇnóçOﬂ;@2yXbM”?†bM“Ò©¸?Ô≥ªÉœ,˘  @ÍÈ˝86®@‘Zä:ºîp@ &vB||R?”q≈?9—≥?Á±vöë^?√‡z(ª
+-@'⁄ï¶≈“¯      ¯      ¯      ¯      ¯      ¯      ¯      @jï…Ä"`¿à…M
+ˇû?œ.1Ã≤ûSPLUS-n07s41SPLUS.SPLUS-n07s41.0000001002.griz@i°˛\ë—N¿!òY»…2@º-“Ò©¸@í,nóç   $Bn(ˆ  @û∏R?ÊffAÅ◊
+?˙·H?Ÿôö¬Ñ≥3?˝nóçOﬂ?⁄·H   Aêè\<£◊
+BÉ  Aé£◊<£◊
+Bw33Aë
+=<£◊
+BÄôöAí  <ı¬èBÃÕAèÖ<ı¬èBÃÕAí∏R<ı¬èB33AíQÏ=#◊
+Aœ33Aèôö=#◊
+A¡ôöAíı√=#◊
+A»  Aí(ˆ=#◊
+AÏÃÕAêè\=#◊
+A∆ffAí·H=#◊
+A„33Aì
+==#◊
+AÎ33Aëp§=#◊
+Aƒ  AìÖ=#◊
+AÊffAï
+=<£◊
+Bt  AìÆ<£◊
+BK33AïÆ<£◊
+Bm33Aï
+==#◊
+AÓffAìÎÖ=LÃÕA∫ffAïÖ=#◊
+AÍffAòQÏ<£◊
+B0ffAó
+=<ı¬èBffAò£◊<£◊
+B0ffAö{<ı¬èB  Aò·H=LÃÕAæffAöff<ı¬èBôöAõ◊
+=LÃÕA∑33Aõ∏=è\)Ap  Aú=q=LÃÕA∂ffAûÃÕ>#◊
+@”33Aúz·>aGÆ@†  AüGÆ>.{@–  A†è\>ôö@ÈôöA°Æ>îz·@lÃÕA°\)>#◊
+@‡   ∑œ WDJ134014.95-084751.53 Gaia DR2 361818016211166054426[∞ ‚ @i°˝Êì,K?—mq◊<¿∞¿!ò_î%¨Ñ?ÃE˜ıH?Êªò«‚ÇA?‘¢3úæ‡¿ìtºj~˙?„çOﬂ;dZ@#Êfffff?‹›/üæw?Í·GÆz·?‚ç°=“…@Ç{›…ı?˚ıR_	s	@2¬8⁄<!@Åô&ß‰Ë@(ˇ>@ÿ&¯@2yè>’(@h2.Kzx@%∑(“î‡Î@3z_AÆ˜?Ùz·GÆ{@t-é_Û3(@Jõù)É¯@¥–YXbN?ΩÊ9ú#!                   ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ?Îˆ©?)
+ª  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @i°˛*"Î°¿!òe1ùZÈ?–]Ã‡‘(SPLUS-n07s42SPLUS.SPLUS-n07s42.0000000731.griz@i›j®ÎF5¿!û◊∆˚“t@Ø|ÎI∫@ê‡~˘€"—   B 33  @p  ?Æ{AÉ\)?ÃÃÕ?≈∏¬*è\?˘XbM“Ú?Êff   Añ  <ı¬èA˘ôöAì◊
+=#◊
+A“ffAï¬è=#◊
+AˆffAó∏=LÃÕA†ÃÕAïôö=è\)A|ÃÕAñı√=LÃÕAü33AóÆ=∏QÏAFffAï∏=ÃÃÕA+33Aó\)=∏QÏADÃÕAòÃÕ=ÃÃÕA333Aó33>∏A  Aòè\=ÃÃÕA1ôöAò(ˆ=∏QÏAK33AïÆ=ÃÃÕA+33Aóôö=£◊
+AP  Aö£◊=#◊
+A√33Aô¬è=u¬èAâôöAöz·=LÃÕAæffAõôö=ÃÃÕA0  Aõ∏>ôö@ÈôöAõôö=ÃÃÕA(  AùÎÖ=LÃÕAß33Aú  =è\)AÇffAù◊
+=LÃÕA°ôöAûff=u¬èAéffAû(ˆ=∏QÏA9ôöAûff=u¬èAàÃÕA†ı√=£◊
+A\ÃÕA†=q=ı¬èAffA†ı√=£◊
+ATÃÕA°Ö>#◊
+@÷ffA¢=q>è\)@yôöA¢=q>8QÏ@¿  A¢ÃÕ>ôö@ÈôöA¢QÏ>kÖ@ñffA¢ÃÕ>#◊
+@‹ÃÕ ∫µ WDJ134740.62-084836.91 Gaia DR2 361749014984539520023Ë  g @i›j´Ÿ
+ì?ÿåíœ,¿!û€ö$)Ë?“8-X«‹g?·ä	ﬁ?ŸrGE8Ô5?ÙãCïÅ%?ÌÅ$›/¿õ•„S˜œ?„+I∫^        ?Íe:Å‹≤@tﬁ—Ωˇ]?¸/:}9ÊQ@3l©GåÜå@t97zÂl@)cïx∫∂@3í‘‡ò@\cUs%∂@$)≤R[@3ü∫ÓÌâ?ı◊
+=p£◊@tZb≤VÙ@I»(±~çÜ@µZ~˘€#?ΩúÿØ3Z                   ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ?Í<ûÏø±[  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @i›j†„/¿!ûŸ_QP(?∫Ïeîæı™SPLUS-n08s03SPLUS.SPLUS-n08s03.0000039680.griz@cDq≤ïÍ¿"'ÅÉ˘d@Æëæv»¥@øÔﬁ∏QÎÖ   'C ÎÖ @Ö?J=qAj{?Ëı√?‘z·B∞è\?ƒõ•„S¯?áÆ   Aé£◊<£◊
+Bë  Aä·H<£◊
+Bú  AåQÏ<£◊
+BüffAéQÏ<£◊
+Bg33Aäı√<£◊
+BnffAåQÏ<£◊
+BxffAè
+=<ı¬èB"ÃÕAãÖ<ı¬èBffAç
+=<ı¬èB,  Aé·H<£◊
+B333Aã\)<ı¬èB.  Aå·H<£◊
+B<  Aè¬è<£◊
+B/33Aå·H<ı¬èB  Aé(ˆ<£◊
+B2ffAë33<£◊
+Bπ  Aéè\<£◊
+BÆôöAèÆ<£◊
+Bø  AëÆ<£◊
+B5ôöAéı√<ı¬èB  Aê(ˆ<£◊
+B533Aî·H<£◊
+B£33Aí∏R<£◊
+BÇÃÕAìÖ<£◊
+BüôöAñ£◊<£◊
+BvffAî  <£◊
+BGôöAî·H<£◊
+Bt  Aòff<£◊
+BdÃÕAñ(ˆ<ı¬èBÃÕAñ·H<£◊
+BR  Aô◊
+=#◊
+A“ffAóÎÖ=è\)AlÃÕAòÃÕ=LÃÕA≠ôöAõ∏=#◊
+AÏÃÕAòff=u¬èAäffAô\)=#◊
+AÀ33 c« WDJ101633.30-090437.68 Gaia DR2 37690391360367275524NQ  ´ @cDpûÃ(?’ûﬁÜNû¿"'é˙?‡Z•>q?ÎÅo h‹?œÀí:)«z¿"–Â`Aâ?‡ ƒõ•„T¿∆ßÔù≤-?Âôôôôôö        ?ÏF]|≤Ÿ@ê∏/´”®@˝“3mP°@2¡∆çm@èäQKYÜ∏@1›ˆäå@1◊b•ÁÖ∂@tÁáçgr®@*…f˝ÁtY@2sv_ÿ≠¨?Û“Ò©˚Ám@onÇ‘lrR@BÓGS\º@≥h49Xb?∫∞ö¢?y                   ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ?Ì},{âZ  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @cDp»BÇ¿"'~(›ñ_?»“f•§MåSPLUS-n08s39SPLUS.SPLUS-n08s39.0000026319.griz@iqLÏA›¿"àF‹]d@∞Âü|Ìëh@ªZüæv…   B£◊  @7
+=?Ö∏AÉ∏?Ÿôö? =qB(ff?ıôôôôôö?‘z·   AôGÆ<ı¬èB ÃÕAñff=#◊
+AÂôöAòQÏ<ı¬èBÃÕAöQÏ=LÃÕAü33Añı√=u¬èAëôöAôÖ=LÃÕA†  Aô¬è=£◊
+AfffAò{=ÃÃÕA,ÃÕAôGÆ=£◊
+A^ffAôôö=è\)A|ÃÕAôÖ=·GÆA   Aôôö=è\)AiôöAôôö=è\)AÅôöAóÆ=∏QÏAH  Aòı√=è\)AÄ  AúQÏ<ı¬èBôöAôÎÖ=#◊
+A‘  AõÆ<ı¬èB   Aû{=∏QÏAIôöAõ∏=·GÆA$ÃÕAù\)=∏QÏADÃÕAûÃÕ=#◊
+A»  AõÆ=LÃÕAß33Aû=q=#◊
+A¿ÃÕA°¬è=è\)AÇffAü\)=∏QÏADÃÕA†ı√=è\)A~ffA£\)=ÃÃÕA4ÃÕA¢∏R>#◊
+@÷ffA£GÆ=·GÆA#33A£∏>W
+=@©ôöA£
+=>Ωp§@9ôöA¢=q>W
+=@¶ffA•¬è>kÖ@ñffA£p§>£◊
+@S33A¶(ˆ>ä=q@Ä   µÕ WDJ133409.74-091556.44 Gaia DR2 361800925677333017625¿@ • @iqLÄÆFì?€Õ‘aùÜ3¿"àŒ◊®?‘#¬ô‡?ÍWßÜ¬&Å?€çOﬂ;dZ?√tºj~˘€?Ô∂E° ¿É¿ Vìtº?‰z·GÆ{        ?Ï4*ˇ›Ò7@p‡≤€ﬁˆ	?ˆr7ñö◊x@3úõå∏·@rk’=5á@&‹=˝Òì€@3-éÜ@ Å@Y ◊˚"L¨@  çŸåÙ@3∫a´Ï?˜ëhr∞ ≈@t~€`%î@Jú3Ød@µÑ:üæv…?∂∫^U*                   ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ?Î¸π#¢úx  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @iqLI@L¿"àÏ›’.?ÃÀ/gç∫SPLUS-n10s35SPLUS.SPLUS-n10s35.0000031671.griz@h«`‘V.¿'?˙¡“û@ØŸÃÃÃÃÕ@¬Ê˙=p£◊   "BU∏ @W
+=?ú(ˆAÄÃÕ@QÏ?‹(ˆ@ˇ
+=?ˆ1&Èx’?û∏R   ¬∆      øÄ  ¬∆      øÄ  ¬∆      øÄ  Aó33=#◊
+AÏÃÕAî  =#◊
+A¡ôöAï◊
+=#◊
+AÃÕAô∏=è\)As33Aì
+==è\)AqôöAñı√=è\)AÇffAóôö=LÃÕA¢ffAì◊
+=è\)AÉ33Añ=q=LÃÕA¢ffAóp§=LÃÕA©ôöAìÖ=u¬èAäffAñ(ˆ=LÃÕA®ÃÕAôGÆ<£◊
+B6ffAïGÆ<ı¬èBÃÕAó¬è<£◊
+B:ffAô\)=LÃÕA∞ÃÕAñ(ˆ=è\)AÉ33AóÎÖ=LÃÕA∞ÃÕAõôö<ı¬èB33Aóôö=#◊
+AÁ33Aö{<ı¬èBÃÕAû£◊=LÃÕAºÃÕAöz·=u¬èAéffAú∏R=#◊
+A¬ffAûè\=LÃÕA≥33Aõ◊
+=£◊
+A[33AùGÆ=LÃÕA©ôöA§ff>kÖ@ì33AüGÆ>û∏R@`  A§(ˆ>è\)@s33A°
+==·GÆA33Aù
+=>.{@ÃÃÕAüGÆ=·GÆA   Æä WDJ131253.30-113243.41 Gaia DR2 36219110799428328962Cú C @h«ag?‘›£2m2¿'>WX]b?–è˝ﬂ^í?ıiDg8~?⁄L/É{J#¿<Z¨1'?Ê~˘€"–ÂøÚìtºj?‚Ÿá+        ?Êµö¿[•@{.¯ƒWG?˝búñíÍù@3°<%J<@w· ÛcWŸ@*Ã¿üû@2Âb(DÄ@a{;√¨#@Ã‚—8Ôz@3e”g¡L?Û333333@st¥~Ìp‹@I}'˜ôi@∏VÎ]ÃcÒ?ø <Nq,‹                   ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ?ÔôÑ†‰∂  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @h«f∞ˆÙ¿'=¥üz?ßU_ŒçSSPLUS-n11s26SPLUS.SPLUS-n11s26.0000025367.griz@gËºú$¿*Å¯†ê-‡@øjU¬è\)@ºåı¬è\)   Bû{  @\)?O\)Ao
+=?œ\)?«ÆBü(ˆ?Òüæv»¥?ó
+=   Aî£◊<£◊
+BJÃÕAèGÆ<£◊
+BIôöAê·H<£◊
+B_ôöAî·H<ı¬èBffAê=q<ı¬èBffAë¬è<ı¬èB  Aîè\=#◊
+AÃ  Aê{=LÃÕA≤ffAëp§=#◊
+A–ÃÕAîz·=#◊
+AÿÃÕAêQÏ=LÃÕA∞ÃÕAë◊
+=#◊
+A–ÃÕAîÃÕ=#◊
+A‚ffAí  =LÃÕA†ÃÕAíı√=#◊
+A…ôöAñè\<£◊
+BdÃÕAíÃÕ<£◊
+B4ffAì◊
+<£◊
+B^  Añff=#◊
+AÃÕAìôö=LÃÕA®  Aîz·=#◊
+A’ôöAòı√<£◊
+BXÃÕAñ£◊<ı¬èBÃÕAó33<£◊
+B:ffAö£◊<ı¬èB   Aó∏=#◊
+AËÃÕAò{<ı¬èBôöAõ¬è<ı¬èBffAòÃÕ=#◊
+A¬ffAö  <ı¬èA˙ffAü33=£◊
+A[33Aúff>\)@˘ôöAúı√=ÃÃÕA333Aûz·=u¬èAò  Aú∏R=·GÆAôöAú=q=è\)AtÃÕ ö WDJ121751.82-131513.70 Gaia DR2 35762309760134906881°S  Z @gËl°Gù?Œë'Ö}™¿*ÅıUƒ¸¯?Œ^≥BCÑ·?ˆE° ¿É?‘«‚Ç@∑Ä¿ ˝Û∂E°À?„ŒŸá+¿çOﬂ;d?ÿ£◊
+=p§        ?·∫züŸNª@ÑÙöe?ç?˙À	 	K5@2üK• \@Ñ3 ±‡H@6‹Õ√œEÒ@2S=»K^@kVj3Œ˝@ òj¡,∂˜@2Èå;Eâ?Ù£◊
+=p§@r'î…ré‰@HfÏÑyi&@≥˘8>BZÓ?ºÉÃÕŸÙ                   ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ?Ôäõœ‘ø
+  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @gËªq·ø¿*ÅÚÏv>U?ƒèüzNï‡SPLUS-n11s39SPLUS.SPLUS-n11s39.0000003756.griz@i\ F«dÆ¿,,!~|@∂‹Züæv…@ùtºj   A◊
+=  @>∏R?ä=qAÖ¬è?ÀÖ?¬è\¡»{?Ûüæv»¥?ö·H   Aúè\=#◊
+AÏÃÕAòff=#◊
+A“ffAôÆ=#◊
+A¯ÃÕAùôö=u¬èAò  Aó¬è=u¬èAôôöAö(ˆ=LÃÕA§  AúÃÕ=£◊
+ATÃÕAôÖ=·GÆA   Aö=q=£◊
+AP  Aú(ˆ=è\)As33Aòè\=∏QÏA>ffAô¬è=è\)AiôöAü\)=∏QÏA@  AúQÏ>∏AÃÕAú{=∏QÏADÃÕA†ff=#◊
+AÿÃÕAúQÏ=LÃÕA¨ÃÕAù¬è=#◊
+A”33A†·H=£◊
+ANffAõ◊
+=ÃÃÕA0  AùÆ=£◊
+AS33A¢  =LÃÕA≠ôöAüp§=£◊
+AX  A†ff=u¬èAëôöA§·H=£◊
+ATÃÕAüÎÖ=ÃÃÕA(  A°ôö=£◊
+AQôöA¶·H=·GÆAffA°\)>∏AôöA£◊
+=ı¬èAffA¢£◊>W
+=@£33A°GÆ>‹(ˆ@   A¢=q>û∏R@`  A•¬è>.{@…ôöAû{>.{@ÃÃÕA¢ff>8QÏ@√33 ¥‹ WDJ133130.94-140510.25 Gaia DR2 36096712177183299842 Ÿ ÇÄ@i\ÚïÉg?‡˘Nπ.V⁄¿,,!YVÑ?‹è€Añ™?ÊÙ!-w2?„QÇ©ì·¿	ìtºj~˙?Ú~˘€"–Â¿$›/üæ?Ô∆ßÔù≤-        ?ÚCëOH=@k÷⁄Ò&-?˘D∑“ »@3—©∏Àé@j€„„èú›@!”e”¿˚Ä@3Ö\RÁ-°@Pl…#Ìi{@#[Ìˇv:@47œÄ‹3r?Ù(ı¬è\)@s◊	È’;@G”£	è@¥ˆ]≤-V?º±‡â˘                   ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ?Ó≤ÈÃ∑‘  ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      @i\ WôK¿,,€Ñ∏Û?¡˜4∑@ÂLSPLUS-n12s25SPLUS.SPLUS-n12s25.0000021394.griz@g+Eı≠ñß¿-†˛Gô≈@§øG+J@∑cS˜ŒŸ   BCg=q @,(ˆ?z·HA^{?Ô\)?‡  ¬ép§?Ú‘˝Û∂E¢?áÆ   Aá33<£◊
+B˛ÃÕAÇQÏ<£◊
+CLÕAÑ£◊<£◊
+CffAáGÆ<£◊
+BªôöAÉôö<£◊
+B”  AÖp§<£◊
+BÃôöAá∏<£◊
+BÇ33AÑ=q<£◊
+BÑÃÕAÖôö<£◊
+BâÃÕAà{<£◊
+Bè33AÖ
+=<£◊
+Bí33AÜQÏ<£◊
+BôffAà£◊<£◊
+BéÃÕAÖp§<£◊
+BìôöAÜ∏R<£◊
+BöôöAä(ˆ<£◊
+C33AáÖ<£◊
+C33Aàè\<£◊
+C!ÃÕAäQÏ<£◊
+Bõ33AáÎÖ<£◊
+BîôöAà·H<£◊
+B¢ffAå·H<£◊
+CöAäÃÕ<£◊
+BıÃÕAãÆ<£◊
+C≥3Aé  <£◊
+B‡ÃÕAå  <£◊
+B√ôöAåÃÕ<£◊
+B‚ffAê=q<£◊
+BœffAçÎÖ<£◊
+BöffAéÃÕ<£◊
+B»33AëÎÖ<£◊
+B>ÃÕAè◊
+=#◊
+AÏÃÕAêè\<ı¬èB-ôöAí·H<£◊
+Be33AèÎÖ<ı¬èBôöAë
+=<£◊
+BSôö 9{ WDJ122124.56-144851.89 Gaia DR2 35218021310771837440ﬂÙa π @g+EΩˆ“—?∫”0∫≠k¿-†˝!äqè?¥%Le.ÊN@=<64?¡*0U2a|¿2ù/üæw?“M“Ò©˚Á¿Å$›/?≈∏QÎÖ?Ã¨1&Èy?–æÎ„ìb…@£‰l5œ ò@éÆÖvn@1,söø@°¸"∑ñ≈@>¡£?(ê≈@0Ú3&ù˘{@â¸lœâtv@(^(Ó’g@1vRXíhM?Û≤-V@rBΩlµ”@G∂ÁXıº@≥ l‡uˆ˝?¿éX∏6@Z                   ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ?Ô∏œø∆T  @Ë‚¿ÈuÕ@“.‚Ïç\t@ XÓÆû‰?—π°v›¨Ô?Ê„Ìbsì?¬!ñRΩ<6?Â'Xû˝Ü©¯      ¯      ¯      ¯      ¯      ¯      ¯      @g+Fk“0ô¿-†˙∏uòW?πÅå∂XSPLUS-n12s38SPLUS.SPLUS-n12s38.0000001780.griz@i\§Tﬁ~¶¿/∑™%ÿÿ@∫⁄$õ•„T@î¿¢–Â`B   ˚C˘z·  @±ÎÖ@GÆAS33@5¬è@'Æ¬ÉkÖ?ˇ&Èx‘˝Ù?ê£◊   AmGÆ<£◊
+CÆs3AgÖ<£◊
+C»åÕAm¬è<£◊
+C¨  AoÖ<£◊
+CdffAhQÏ<£◊
+CÜŸöAp(ˆ<£◊
+C`  Apı√<£◊
+C≥3Aj{<£◊
+C4LÕAq¬è<£◊
+CffApı√<£◊
+C+Ä Aj=q<£◊
+CC  Aq¬è<£◊
+C'ÊfArè\<£◊
+C$öAjè\<£◊
+C@ÃÕAs33<£◊
+C ÊfAu¬è<£◊
+C≠s3Ao
+=<£◊
+C«s3Avff<£◊
+C™  Av=q<£◊
+C/≥3Ao\)<£◊
+CCÃÕAv·H<£◊
+C,33A|  <£◊
+C†33Avff<£◊
+CßÛ3A|£◊<£◊
+Cù33A~è\<£◊
+C~33Ay∏<£◊
+CÅLÕA
+=<£◊
+CzffAÅGÆ<£◊
+CyLÕA}∏<£◊
+C[ffAÅÆ<£◊
+Cs≥3AÇı√<£◊
+B¯33AÄ£◊<£◊
+B∑ôöAÉGÆ<£◊
+BÙ  AÉ◊
+<£◊
+CÃÕAÄ£◊<£◊
+BÿôöAÑ(ˆ<£◊
+C≥3 Kì WDJ133134.81-153047.40 Gaia DR2 36048131973896602882ﬁÅ  Ä@i\§{ai?Ã1+fA,J¿/∫Ûï%N?¬ÆzÚ±˜@oiDg?—XbM“Ú¿ñá+J?◊
+=p£◊
+@∏QÎÖ∏?—x‘˝Û∂F?Ú·GÆz·?’ä·oÚ c@…0°Hö.{@5]C|ÃÔ'@.”ßüÏö@«6«q(ù@Y,ë6g–¥@.S‚¥ïûb@∞ó2¸0˝∏@+~°™√B[@/b!»ß§?Ùìtºj@sœÃoW@G!N‘«@µÕä	?ƒíDôju                   ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ¯      ?Ïy|√ü˝  @Â}T?v@∞3∆>x‚@pzÚ•µ?ƒûêy_go?ÿ¿Ω —J
+?°/	ÿ∆÷@5e[ªËx˚¯      ¯      ¯      ¯      ¯      ¯      ¯      @i\§Hn+¿/Ωª€œ{?√1´J≥ÂV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
