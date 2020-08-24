@@ -1,0 +1,6 @@
+data
+tables
+*.py~
+*.py#
+*~
+*.dat~
