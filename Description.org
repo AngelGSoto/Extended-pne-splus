@@ -200,7 +200,25 @@ Seyfert2: 2MFGC 913, (18.3877629343,  +0.4967191726), debe estar en el campo; ST
 
 ##########################################################################################################
 Probablemente hay que hacer      data *= np.power(10, -0.4 * (-25+zps) )[:, None, None] # Apply zero point
-Para calcular el flujo correcto
+xPara calcular el flujo correcto
 ##########################################################################################################
 
 Tenía un error en el programa, los filtros estaba invertido, y parece que estaba substrayendo la emisión de Ha.  
+
+** Automatizando los programas:
+
+- Escribí un programa para escribir las DS9 region (basados en los programas del profesor Will) de cada objeto individual, pero no funcionó del todo.
+
+- Dado que no conseguí usar el comando funpack en el computador del IAG, decidí usar el programa de Gabriel, 
+lo modifiqué un poco para volverlo mas automático, este programa covierte archivos .fz en .fits: 
+for D in ./HYDRA-*; do if [ -d "$D" ]; then cd "$D"; for f in *.fz; do python ../../varios-programas/convert-fz-fits.py ${f%.fz}; done; cd ..; fi; done
+
+- Automatizé aún masel progama que corta las imágenes (/varios-programas/cut-images-fits.py), sólo basta correr el comando en la terminal: 
+    for D in ./HYDRA*; do if [ -d "$D" ]; then cd "$D"; for f in *.fits; for e in *.reg; do python ../../../../varios-programas/cut-images-fits.py ${f%.fits} 
+                                                                                                                             --position ${e%.reg} --debug; done; cd ..; fi; done
+- Pare correr el programa que extra la emission de Halpha, sólo hay que hacer:
+  -- python Pne-halpha-luis-automa.py SPLUS-n18s21 --source 00020654
+     1)  SPLUS-n18s21 es el campo.
+     2)  00020654 es el número de la fuente
+
+
