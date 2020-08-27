@@ -211,14 +211,13 @@ Tenía un error en el programa, los filtros estaba invertido, y parece que estab
  pero no funcionó del todo. pero lo que sÍ hace es escribe un archivo.reg de cada objeto (pero en cada archivo escribe las posicisiones de cada objeto). Lo automtizÉ mÁs, ahora
 encuentra la carpeto donde esta las images de cada objeto y ahÍ guarada el archivo .reg.
 
-
 2. Dado que no conseguí usar el comando funpack en el computador del IAG, decidí usar el programa de Gabriel, 
 lo modifiqué para volverlo mas automático, este programa covierte archivos .fz en .fits: 
 for D in ./HYDRA-*; do if [ -d "$D" ]; then cd "$D"; for f in *.fz; do python ../../../../varios-programas/convert-fz-fits.py ${f%.fz}; done; cd ..; fi; done
 
 3. Automatizé aún masel progama que corta las imágenes (/varios-programas/cut-images-fits.py), sólo basta correr el comando en la terminal: 
-    for D in ./HYDRA*; do if [ -d "$D" ]; then cd "$D"; for f in *.fits; for e in *.reg; do python ../../../../varios-programas/cut-images-fits.py ${f%.fits} 
-                                                                                                                             --position ${e%.reg} --debug; done; cd ..; fi; done
+    for D in ./HYDRA*; do if [ -d "$D" ]; then cd "$D"; for f in *.fits; for e in *.reg; do python ../../../../varios-programas/cut-images-fits.py ${f%.fits} --position ${e%.reg} --debug; done; cd ..; fi; done
+
 4. Pare correr el programa que extra la emission de Halpha, sólo hay que hacer:
    python Pne-halpha-luis-automa.py SPLUS-n18s21 --source 00020654
      -  SPLUS-n18s21 es el campo.
