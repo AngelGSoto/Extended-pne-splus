@@ -56,7 +56,7 @@ if __name__ == "__main__":
     try:
         data = np.array([fits.getdata(_) for _ in filenames])
     except FileNotFoundError:
-        filenames = [os.path.join(img_dir, "{}_{}_swp".format(tile,
+        filenames = [os.path.join(img_dir, "{}_{}_swp.fits".format(tile,
                            band)) for band in bands]
         data = np.array([fits.getdata(_) for _ in filenames])
         
