@@ -1,6 +1,7 @@
-data
 tables
 *.py~
 *.py#
 *~
 *.dat~
+*.dat#
+*.fits
