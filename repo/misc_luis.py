@@ -21,7 +21,8 @@ def get_zps_dr1(Field, bands):
     """ Read the table containing the zero points for a given tile and given
     bands. """
     zpfile = os.path.join(context.tables_dir, "ZPfiles_2020",
-                          "SPLUS_DR1_Revised_ZPs.cat")
+                                       "MAIN3.1_ZPs.cat")
+
     zpdata = Table.read(zpfile, format="ascii")
     zpdic = {a: {"R": b,
                  "F660": c,

@@ -24,7 +24,7 @@ import argparse
 import sys
 
 import context
-import misc_luis_v1 as misc
+import misc_luis as misc
 from halpha_estimators import halpha_3F_method
 
 try:
@@ -37,7 +37,8 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument("field", type=str,
                     default="STRIPE82-0164",
-                    help="Name crop field centred in the source, taken the prefix (only the tile, ??_swp-crop.fits)")
+                    help="Name crop field centered in the source, taken the prefix (only the tile, ??_swp-crop.fits)")
+
 parser.add_argument("--source", type=str,
                     default="39866",
                     help="Number source")
@@ -61,7 +62,7 @@ if __name__ == "__main__":
         data = np.array([fits.getdata(_) for _ in filenames])
         
     zps = misc.get_zps_dr1(tile, bands) # Get zero points from DR1 tables
-    
+    print(zps)
     data *= np.power(10, -0.4 * zps )[:, None, None] # Apply zero point
     idxs = [bands.index(band) for band in ["F660", "R", "I"]]
     halpha = halpha_3F_method(data[idxs[0]], data[idxs[1]], data[idxs[2]]).value
@@ -117,7 +118,7 @@ if __name__ == "__main__":
 
     img1.add_scalebar(10.0/60.)
     img1.scalebar.set_label('10 arcmin')
-    img1.scalebar.set(color='blue', linewidth=8, alpha=1)
+    img1.scalebar.set(color='cyan', linewidth=8, alpha=1)
     img1.scalebar.set_font(size=30, weight='bold',
                       stretch='normal', family='sans-serif',
                       style='normal', variant='normal')
@@ -148,5 +149,5 @@ if __name__ == "__main__":
     #ax.set_xlabel('Right Ascension')
     #ax.set_ylabel('Declination')
     img1.set_theme('publication')
-    plt.savefig("halpha-{}_{}-ZP_kadu.pdf".format(cmd_args.field, 
+    plt.savefig("MAIN31/halpha-{}_{}.pdf".format(cmd_args.field, 
                                           cmd_args.source))
